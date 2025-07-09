@@ -32,7 +32,7 @@ const CTA = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white hover:bg-gray-50 text-black rounded-full px-4 h-[50px] font-medium text-[14px]">
+                <button className="bg-white hover:bg-gray-100 text-black rounded-full px-4 h-[50px] font-medium text-[14px]">
                   BAGIKAN CERITA
                 </button>
                 

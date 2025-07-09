@@ -1,83 +1,95 @@
-import React from 'react';
-import { Grape, Instagram, Music } from 'lucide-react';
+import React from "react";
+import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-emerald-800 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-darkGreen text-white py-12 rounded-t-3xl">
+      <div className="mx-auto px-4 sm:px-6 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Side - Logo and Address */}
-          <div className="space-y-6">
+          <div className="space-y-2">
             {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center">
-                <Grape className="w-7 h-7 text-white" />
-              </div>
-              <div className="text-2xl font-bold">
-                Kitala Stroberi
-              </div>
+            <div className="flex items-center">
+              <Image
+                src="/LOGO 2 WHITE.png"
+                alt="Kitala Stroberi Logo"
+                width={320}
+                height={0}
+              />
             </div>
 
             {/* Address */}
-            <div className="text-emerald-100 leading-relaxed">
+            <div className="text-white">
               <p>Kebun Krecek, Tulungrejo, Bumiaji, Batu, Kota</p>
               <p>Batu, Jawa Timur 65331</p>
-            </div>
-
-            {/* Social Media */}
-            <div className="flex gap-4">
-              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200 cursor-pointer">
-                <Instagram className="w-5 h-5" />
-              </div>
-              <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors duration-200 cursor-pointer">
-                <Music className="w-5 h-5" />
-              </div>
             </div>
           </div>
 
           {/* Right Side - Collaboration and Navigation */}
-          <div className="lg:text-right space-y-6">
+          <div className="flex justify-end space-y-6">
             {/* Collaboration Section */}
-            <div>
-              <p className="text-emerald-100 mb-4 italic">Kolaborasi Dengan</p>
-              <div className="flex justify-end items-center gap-4">
-                {/* Government Logo Placeholder */}
-                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
-                </div>
-                
-                {/* Lestari Bumiaji Logo */}
-                <div className="bg-yellow-400 px-4 py-2 rounded-lg">
-                  <div className="text-emerald-800 font-bold text-sm">
-                    lestari bumiaji
-                  </div>
-                  <div className="text-emerald-700 text-xs">
-                    KOTA BATU JAWA TIMUR 2025
-                  </div>
-                </div>
-              </div>
+            <div className="space-y-2 text-center lg:text-right">
+              <p className="text-white mb-4 italic">Kolaborasi Dengan</p>
+              <Image
+                src={"/ugm-lestari.png"}
+                alt="Logo 2"
+                width={340}
+                height={0}
+              />
             </div>
-
-            {/* Navigation Links */}
           </div>
         </div>
 
         {/* Separator Line */}
-        <div className="w-full h-px bg-emerald-600 my-8"></div>
+        <div className="w-full h-px bg-white my-6"></div>
 
         {/* Bottom Navigation */}
-        <div className="flex justify-center lg:justify-end">
-          <div className="flex gap-8 text-emerald-100">
-            <a href="#" className="hover:text-white transition-colors duration-200">
+        <div className="flex justify-between">
+          <div className="flex flex-row items-end mb-4 gap-2">
+                              <a
+                                href="https://www.tiktok.com/@yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full bg-white p-2 inline-block hover:bg-[#E12929] transition-colors duration-200 group"
+                              >
+                                <AiOutlineTikTok className="w-5 h-5 text-[#E12929] group-hover:text-white" />
+                              </a>
+          
+                              <a
+                                href="https://www.instagram.com/@yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="rounded-full bg-white p-2 inline-block hover:bg-[#E12929] transition-colors duration-200 group"
+                              >
+                                <AiFillInstagram  className="w-5 h-5 text-[#E12929] group-hover:text-white" />
+                              </a>
+                              
+                            </div>
+
+          <div className="flex gap-8 text-white">
+            <a
+              href="#"
+              className="hover:text-white transition-colors duration-200"
+            >
               Tentang Kami
             </a>
-            <a href="#" className="hover:text-white transition-colors duration-200">
+            <a
+              href="#"
+              className="hover:text-white transition-colors duration-200"
+            >
               Galeri
             </a>
-            <a href="#" className="hover:text-white transition-colors duration-200">
+            <a
+              href="#"
+              className="hover:text-white transition-colors duration-200"
+            >
               Wisata
             </a>
-            <a href="#" className="hover:text-white transition-colors duration-200">
+            <a
+              href="#"
+              className="hover:text-white transition-colors duration-200"
+            >
               Cerita
             </a>
           </div>
