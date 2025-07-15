@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const Gallery = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -12,7 +13,7 @@ const Gallery = () => {
     [
       {
         id: 1,
-        src: "https://images.pexels.com/photos/1122408/pexels-photo-1122408.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
         alt: "Strawberry plants in garden"
       },
       {
@@ -61,15 +62,15 @@ const Gallery = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex justify-between items-end mb-12">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-12 gap-6">
           <div>
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-800">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
               Potret dari<br />
               Kebun Kitala
             </h2>
           </div>
-          <div className="text-right max-w-md">
-            <p className="text-gray leading-relaxed">
+          <div className="md:text-right max-w-md">
+            <p className="text-gray-600 leading-relaxed">
               Lihat lebih dekat aktivitas kami — mulai dari menanam, 
               merawat, hingga memetik stroberi bersama
             </p>
@@ -79,30 +80,31 @@ const Gallery = () => {
         {/* Gallery Container */}
         <div className="relative">
           {/* Images Grid */}
-          <div className="flex gap-4 h-96 rounded-2xl overflow-hidden mb-8">
+          <div className="flex flex-col md:flex-row gap-4 md:h-96 rounded-2xl overflow-hidden mb-8">
             {currentImages.map((image, index) => (
               <div
                 key={image.id}
-                className={`relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-out ${
+                className={`relative rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 ease-out h-64 md:h-auto ${
                   index === 0 
                     ? hoveredImage === index
-                      ? 'flex-[3] shadow-2xl'
+                      ? 'md:flex-[3] shadow-2xl'
                       : hoveredImage !== null && hoveredImage !== index
-                      ? 'flex-[1.5] opacity-80'
-                      : 'flex-[2]'
+                      ? 'md:flex-[1.5] opacity-80'
+                      : 'md:flex-[2]'
                     : hoveredImage === index
-                      ? 'flex-[2] shadow-2xl'
+                      ? 'md:flex-[2] shadow-2xl'
                       : hoveredImage !== null && hoveredImage !== index
-                      ? 'flex-[0.5] opacity-80'
-                      : 'flex-1'
+                      ? 'md:flex-[0.5] opacity-80'
+                      : 'md:flex-1'
                 }`}
                 onMouseEnter={() => setHoveredImage(index)}
                 onMouseLeave={() => setHoveredImage(null)}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-101"
+                  fill
+                  className="object-cover transition-transform duration-300 hover:scale-101"
                 />
                 
                 {/* Overlay gradient */}
@@ -112,7 +114,7 @@ const Gallery = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-end gap-2">
+          <div className="flex justify-center md:justify-end gap-2">
             <button
               onClick={prevSlide}
               className="w-12 h-12 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-all duration-200 group disabled:opacity-50 disabled:cursor-not-allowed"

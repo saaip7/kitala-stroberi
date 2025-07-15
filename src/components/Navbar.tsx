@@ -1,6 +1,16 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <nav className="relative z-50 bg-white backdrop-blur-sm py-2">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -19,7 +29,7 @@ const Navbar = () => {
             </div>
           </a>
 
-          {/* Navigation Links */}
+          {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <a
               href="/"
@@ -47,11 +57,78 @@ const Navbar = () => {
             </a>
           </div>
 
-          {/* CTA Button */}
-          <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-full transition-all duration-200 font-medium">
+          {/* Desktop CTA Button */}
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex bg-white hover:bg-gray-50 border border-gray-300 border-2 text-gray-800 hover:text-red-500 px-4 py-2 rounded-full transition-all duration-200 font-medium items-center justify-center"
+          >
             Hubungi Kami
+          </a>
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-gray-700" />
+            ) : (
+              <Menu className="w-6 h-6 text-gray-700" />
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu Floating Div */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full right-4 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-gray-200 py-4 z-50">
+            <div className="flex flex-col space-y-1">
+              <a
+                href="/"
+                className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Beranda
+              </a>
+              <a
+                href="/galeri"
+                className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Galeri
+              </a>
+              <a
+                href="/tentang-kami"
+                className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Tentang Kami
+              </a>
+              <a
+                href="/artikel"
+                className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Artikel
+              </a>
+              
+              {/* Mobile CTA Button */}
+              <div className="px-2 pt-2">
+                <a
+                  href="https://wa.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full transition-all duration-200 font-medium items-center justify-center w-full"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Hubungi Kami
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
