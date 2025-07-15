@@ -7,13 +7,15 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <div className="flex items-center space-x-2">
-              <Image src="/logo.png" 
-                      alt="Logo" 
-                      width={110} 
-                      height={1000} 
-                      className="hover:scale-105 transition-transform duration-200"
-                    />
+            <div className="flex items-center space-x-2 w-[110px] h-[50px]">
+              <Image 
+                src="/Logo.png" 
+                alt="Kitala Stroberi Logo" 
+                width={110} 
+                height={50} 
+                priority
+                className="hover:scale-105 transition-transform duration-200 object-contain w-full h-full"
+              />
             </div>
           </a>
 
@@ -26,22 +28,22 @@ const Navbar = () => {
               Beranda
             </a>
             <a
-              href="/artikel"
+              href="/galeri"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
-              Artikel
+              Galeri
             </a>
             <a
-              href="#"
+              href="/tentang-kami"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
               Tentang Kami
             </a>
             <a
-              href="#"
+              href="/artikel"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
-              Cerita
+              Artikel
             </a>
           </div>
 
