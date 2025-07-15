@@ -5,6 +5,8 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, User, ArrowLeft, Share2 } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { Article } from '@/types/article';
 import { strapiApi } from '@/services/strapiApi';
 
@@ -188,13 +190,88 @@ const ArticleDetail = () => {
       {/* Article Content */}
       <section className="py-8 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <div 
-              className="text-gray-700 leading-relaxed"
-              dangerouslySetInnerHTML={{ 
-                __html: article.konten || 'Content not available.' 
+          <div className="max-w-none text-gray-700 leading-relaxed">
+            <ReactMarkdown 
+              remarkPlugins={[remarkGfm]}
+              components={{
+                h1: ({children}) => <h1 className="text-3xl font-bold text-gray-800 mt-8 mb-4 leading-tight">{children}</h1>,
+                h2: ({children}) => <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-3 leading-tight">{children}</h2>,
+                h3: ({children}) => <h3 className="text-xl font-semibold text-gray-800 mt-5 mb-2 leading-tight">{children}</h3>,
+                h4: ({children}) => <h4 className="text-lg font-semibold text-gray-800 mt-4 mb-2">{children}</h4>,
+                h5: ({children}) => <h5 className="text-base font-semibold text-gray-800 mt-3 mb-1">{children}</h5>,
+                h6: ({children}) => <h6 className="text-sm font-semibold text-gray-800 mt-3 mb-1">{children}</h6>,
+                p: ({children}) => <p className="text-gray-700 mb-4 leading-relaxed text-base">{children}</p>,
+                ul: ({children}) => <ul className="list-disc list-inside mb-4 text-gray-700 pl-4">{children}</ul>,
+                ol: ({children}) => <ol className="list-decimal list-inside mb-4 text-gray-700 pl-4">{children}</ol>,
+                li: ({children}) => <li className="mb-1 leading-relaxed">{children}</li>,
+                blockquote: ({children}) => (
+                  <blockquote className="border-l-4 border-emerald-500 pl-6 py-4 mb-6 bg-emerald-50 italic text-gray-700 rounded-r-lg">
+                    {children}
+                  </blockquote>
+                ),
+                code: ({children}) => (
+                  <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800 border">
+                    {children}
+                  </code>
+                ),
+                pre: ({children}) => (
+                  <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto mb-6 border">
+                    {children}
+                  </pre>
+                ),
+                a: ({href, children}) => (
+                  <a 
+                    href={href} 
+                    className="text-emerald-600 hover:text-emerald-700 underline hover:underline-offset-2 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {children}
+                  </a>
+                ),
+                img: ({src, alt}) => (
+                  <div className="my-8">
+                    <Image 
+                      src={String(src) || ''} 
+                      alt={String(alt) || ''} 
+                      width={800} 
+                      height={400} 
+                      className="rounded-lg object-cover w-full h-auto shadow-lg" 
+                    />
+                    {alt && (
+                      <p className="text-sm text-gray-500 text-center mt-2 italic">
+                        {String(alt)}
+                      </p>
+                    )}
+                  </div>
+                ),
+                strong: ({children}) => <strong className="font-semibold text-gray-800">{children}</strong>,
+                em: ({children}) => <em className="italic text-gray-700">{children}</em>,
+                hr: () => <hr className="my-8 border-gray-300" />,
+                table: ({children}) => (
+                  <div className="overflow-x-auto my-6">
+                    <table className="min-w-full border border-gray-300 rounded-lg">
+                      {children}
+                    </table>
+                  </div>
+                ),
+                thead: ({children}) => <thead className="bg-gray-50">{children}</thead>,
+                tbody: ({children}) => <tbody className="bg-white">{children}</tbody>,
+                tr: ({children}) => <tr className="border-b border-gray-200">{children}</tr>,
+                th: ({children}) => (
+                  <th className="px-4 py-2 text-left font-semibold text-gray-800 border-r border-gray-200 last:border-r-0">
+                    {children}
+                  </th>
+                ),
+                td: ({children}) => (
+                  <td className="px-4 py-2 text-gray-700 border-r border-gray-200 last:border-r-0">
+                    {children}
+                  </td>
+                ),
               }}
-            />
+            >
+              {article.konten || 'Content not available.'}
+            </ReactMarkdown>
           </div>
         </div>
       </section>

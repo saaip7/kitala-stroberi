@@ -3,11 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calendar, User, Search } from 'lucide-react';
+import { Calendar, User } from 'lucide-react';
 import { Article, StrapiResponse } from '@/types/article';
 import { strapiApi } from '@/services/strapiApi';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 const ArticlesPage = () => {
   const [articles, setArticles] = useState<Article[]>([]);
@@ -52,9 +50,40 @@ const ArticlesPage = () => {
     return article.foto?.alternativeText || article.judul;
   };
 
+  const stripMarkdown = (markdown: string): string => {
+    return markdown
+      // Remove headers
+      .replace(/^#+\s+/gm, '')
+      // Remove bold and italic
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/\*([^*]+)\*/g, '$1')
+      .replace(/__([^_]+)__/g, '$1')
+      .replace(/_([^_]+)_/g, '$1')
+      // Remove links
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      // Remove images
+      .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+      // Remove code blocks
+      .replace(/```[^`]*```/g, '')
+      .replace(/`([^`]+)`/g, '$1')
+      // Remove blockquotes
+      .replace(/^>\s+/gm, '')
+      // Remove list markers
+      .replace(/^[\s]*[-*+]\s+/gm, '')
+      .replace(/^[\s]*\d+\.\s+/gm, '')
+      // Remove horizontal rules
+      .replace(/^---+$/gm, '')
+      // Remove extra whitespace and newlines
+      .replace(/\n\s*\n/g, ' ')
+      .replace(/\n/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+  };
+
   const truncateContent = (content: string, maxLength: number = 150): string => {
-    if (content.length <= maxLength) return content;
-    return content.substring(0, maxLength) + '...';
+    const cleanText = stripMarkdown(content);
+    if (cleanText.length <= maxLength) return cleanText;
+    return cleanText.substring(0, maxLength) + '...';
   };
 
   if (loading) {
@@ -155,7 +184,7 @@ const ArticlesPage = () => {
 
                       {/* Article Excerpt */}
                       <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2 h-12">
-                        {truncateContent(article.konten.replace(/<[^>]*>/g, ''))}
+                        {truncateContent(article.konten)}
                       </p>
 
                       {/* Read More Link */}
