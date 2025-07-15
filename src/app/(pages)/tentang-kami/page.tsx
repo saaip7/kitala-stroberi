@@ -21,7 +21,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Yayasan Mental Section - Image on Right */}
-      <section className="py-16 bg-white">
+      <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content */}
@@ -96,7 +96,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Kebun Kitala Section - Image on Left */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white pb-[20vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Image */}
@@ -192,7 +192,7 @@ const AboutUsPage = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gray-50 rounded-3xl px-8 py-12 md:px-12 md:py-16">
             <div className="flex justify-center items-center mb-8">
@@ -214,7 +214,9 @@ const AboutUsPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+
     </div>
   );
 };
