@@ -20,11 +20,11 @@ const LocationInfo = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Side - Information */}
           <div className="text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">
               Informasi Kunjungan
             </h2>
             
-            <p className="text-lg text-emerald-100 mb-8 leading-relaxed">
+            <p className="text-lg text-white mb-8 leading-relaxed">
               Sebelum kamu datang ke Kebun Kitala, berikut 
               informasi penting yang perlu kamu tahu
             </p>

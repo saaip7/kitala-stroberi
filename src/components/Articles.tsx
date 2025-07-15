@@ -81,7 +81,9 @@ const Articles = () => {
         {/* View All Articles Button */}
         <div className="flex justify-center">
           <button className="bg-darkGreen hover:bg-emerald-800 text-white px-8 py-3 rounded-full transition-all duration-200 font-medium text-[14px]">
-            LIHAT SEMUA ARTIKEL
+            <a href="/artikel">
+              <span>LIHAT SEMUA ARTIKEL</span>
+            </a>
           </button>
         </div>
       </div>

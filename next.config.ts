@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: 'images.pexels.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'satisfying-horn-8d3c02bb04.media.strapiapp.com',
+        pathname: '/**',
+      },
     ],
   },
 };

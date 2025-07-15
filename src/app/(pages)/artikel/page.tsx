@@ -31,7 +31,7 @@ const ArticlesPage = () => {
         setTotalPages(response.meta.pagination.pageCount);
       }
     } catch (err) {
-      setError('Failed to load articles.');
+      setError('Gagal dalam memuat artikel. Silakan coba lagi nanti.');
       console.error('Error fetching articles:', err);
     } finally {
       setLoading(false);
@@ -178,7 +178,7 @@ const ArticlesPage = () => {
                       </div>
 
                       {/* Article Title */}
-                      <h2 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-2">
+                      <h2 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-1  ">
                         {article.judul}
                       </h2>
 

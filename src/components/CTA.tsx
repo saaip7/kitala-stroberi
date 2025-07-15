@@ -2,7 +2,7 @@ import React from 'react';
 
 const CTA = () => {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-white">
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Rounded Container with Background Image */}
         <div className="relative rounded-3xl overflow-hidden min-h-[500px] shadow-2xl">

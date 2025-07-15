@@ -6,7 +6,6 @@ import LocationInfo from "@/components/LocationInfo";
 import Testimonials from "@/components/Testimonials";
 import Articles from "@/components/Articles";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,8 +18,6 @@ export default function Home() {
       <Testimonials/>
       <Articles/>
       <CTA/>
-      <Footer/>
-
     </div>
   );
 }
