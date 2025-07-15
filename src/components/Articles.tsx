@@ -33,7 +33,7 @@ const Articles = () => {
         {/* Header */}
         <div className="flex justify-between items-start mb-12">
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-4">
               Cerita dari Kebun
             </h2>
           </div>

@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Gallery from "@/components/Galeri";
 import WhyVisit from "@/components/WhyVisit";
@@ -12,7 +11,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <Navbar/>
       <Hero/>
       <Gallery/>
       <WhyVisit/>
