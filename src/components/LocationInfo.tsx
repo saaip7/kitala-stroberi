@@ -7,7 +7,7 @@ const LocationInfo = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
           {/* Left Side - Information */}
-          <div className="text-white">
+          <div className="text-white" data-aos="fade-right">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
               Informasi Kunjungan
             </h2>
@@ -20,7 +20,7 @@ const LocationInfo = () => {
             {/* Information Cards */}
             <div className="space-y-3 md:space-y-4">
               {/* Operating Hours Card */}
-              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
+              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
@@ -46,7 +46,7 @@ const LocationInfo = () => {
               </div>
 
               {/* Ticket Price Card */}
-              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
+              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg" data-aos="fade-up" data-aos-delay="300">
                 <div className="flex items-start gap-3 md:gap-4">
                   <div className="w-10 h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <DollarSign className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
@@ -66,7 +66,7 @@ const LocationInfo = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="lg:pl-8 mt-6 lg:mt-0">
+          <div className="lg:pl-8 mt-6 lg:mt-0" data-aos="fade-left" data-aos-delay="200">
             <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl h-64 md:h-80 lg:h-[500px]">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9594621886595!2d112.53212101542759!3d-7.794116969103092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e787f440e5649e3%3A0xa44b8c9567c9144c!2sKebun%20Kitala%20Wisata%20Petik%20Strawberry!5e0!3m2!1sid!2sid!4v1752703736471!5m2!1sid!2sid" 

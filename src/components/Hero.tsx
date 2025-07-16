@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="min-h-screen py-2">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         {/* Rounded Container with Background Image */}
-        <div className="relative rounded-3xl overflow-hidden min-h-[95vh] bg-white">
+        <div className="relative rounded-3xl overflow-hidden min-h-[95vh] bg-white" data-aos="fade-up">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="w-full px-6 md:px-8 lg:px-12">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 items-end">
                 {/* Mobile Price Badge - Only visible on mobile */}
-                <div className="md:hidden">
+                <div className="md:hidden" data-aos="fade-right" data-aos-delay="200">
                   <div className="bg-white backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 w-[fit-content]">
                     <Ticket className="w-4 h-4 text-red-500" />
                     <span className="text-sm font-medium text-black">
@@ -37,7 +37,7 @@ const Hero = () => {
                   </div>
                 </div>
                 {/* Left Content */}
-                <div className="lg:col-span-7 text-white">
+                <div className="lg:col-span-7 text-white" data-aos="fade-right" data-aos-delay="300">
                   <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-4 md:mb-6 font-sans leading-tight">
                     Petik Buahnya
                     <br />
@@ -52,22 +52,32 @@ const Hero = () => {
                   </p>
 
                   {/* Action Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                    <button className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-full flex items-center justify-center gap-3 transition-all duration-200 font-medium text-sm md:text-base group shadow-lg">
+                  <div className="flex flex-col sm:flex-row gap-3 md:gap-4" data-aos="fade-up" data-aos-delay="500">
+                    <a 
+                      href="https://maps.app.goo.gl/S3fLvZbcyxJJbRHb8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white hover:bg-gray-100 text-black px-6 py-3 rounded-full flex items-center justify-center gap-3 transition-all duration-200 font-medium text-sm md:text-base group shadow-lg"
+                    >
                       KUNJUNGI KAMI
                       <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center group-hover:rotate-360 transition-transform duration-500">
                         <ArrowRight className="w-4 h-4 text-white" />
                       </div>
-                    </button>
+                    </a>
 
-                    <button className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 md:px-8 py-3 rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30">
+                    <a 
+                      href="https://wa.me/6281234567890"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 md:px-8 py-3 rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30"
+                    >
                       HUBUNGI
-                    </button>
+                    </a>
                   </div>
                 </div>
 
                 {/* Right Content - Information Card - Hidden on mobile */}
-                <div className="hidden lg:flex lg:col-span-5 lg:justify-end flex-col items-end">
+                <div className="hidden lg:flex lg:col-span-5 lg:justify-end flex-col items-end" data-aos="fade-left" data-aos-delay="400">
                   <div className="flex flex-row items-end mb-4 gap-2">
                     <a
                       href="https://www.tiktok.com/@yourusername"

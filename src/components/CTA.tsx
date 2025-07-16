@@ -5,7 +5,7 @@ const CTA = () => {
     <section className="py-16 bg-white">
       <div className="px-4 sm:px-6 lg:px-8">
         {/* Rounded Container with Background Image */}
-        <div className="relative rounded-3xl overflow-hidden min-h-[500px] shadow-2xl">
+        <div className="relative rounded-3xl overflow-hidden min-h-[500px] shadow-2xl" data-aos="fade-up">
           {/* Background Image */}
           <div className="absolute inset-0">
             <img
@@ -19,7 +19,7 @@ const CTA = () => {
 
           {/* Content */}
           <div className="relative z-10 flex items-center justify-center min-h-[500px] px-8 py-16">
-            <div className="text-center text-white max-w-4xl">
+            <div className="text-center text-white max-w-4xl" data-aos="fade-up" data-aos-delay="200">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6">
                 Petik Stroberimu<br />
                 Tanam Kebaikanmu
@@ -31,7 +31,7 @@ const CTA = () => {
               </p>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
                 <button className="bg-white hover:bg-gray-100 text-black rounded-full px-4 h-[50px] font-medium text-[14px]">
                   BAGIKAN CERITA
                 </button>

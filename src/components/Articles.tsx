@@ -31,7 +31,7 @@ const Articles = () => {
     <section className="py-12 md:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12 gap-4 md:gap-0">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12 gap-4 md:gap-0" data-aos="fade-up">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 mb-3 md:mb-4">
               Cerita dari Kebun
@@ -47,8 +47,8 @@ const Articles = () => {
 
         {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
-          {articles.map((article) => (
-            <div key={article.id} className="group cursor-pointer">
+          {articles.map((article, index) => (
+            <div key={article.id} className="group cursor-pointer" data-aos="fade-up" data-aos-delay={200 + (index * 100)}>
               {/* Article Image */}
               <div className="rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-6 h-48 md:h-64">
                 <img

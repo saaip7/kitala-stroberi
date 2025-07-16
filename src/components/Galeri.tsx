@@ -62,7 +62,7 @@ const Gallery = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-12 gap-6" data-aos="fade-up">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
               Potret dari<br />
@@ -78,7 +78,7 @@ const Gallery = () => {
         </div>
 
         {/* Gallery Container */}
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-delay="200">
           {/* Images Grid */}
           <div className="flex flex-col md:flex-row gap-4 md:h-96 rounded-2xl overflow-hidden mb-8">
             {currentImages.map((image, index) => (

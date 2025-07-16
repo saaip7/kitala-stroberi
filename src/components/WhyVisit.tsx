@@ -30,7 +30,7 @@ const WhyVisit = () => {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Kenapa Harus ke Kitala?
           </h2>
@@ -41,7 +41,7 @@ const WhyVisit = () => {
         </div>
 
         {/* Main Content Container */}
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-delay="200">
           {/* Background Image Container */}
           <div className="relative rounded-3xl overflow-hidden bg-black/20 backdrop-blur-sm">
             {/* Strawberry Background Image */}
@@ -64,6 +64,8 @@ const WhyVisit = () => {
                   <div
                     key={index}
                     className="bg-white rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    data-aos="fade-up"
+                    data-aos-delay={300 + (index * 100)}
                   >
                     {/* Icon */}
                     <div className="w-10 h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center mb-3 md:mb-4">

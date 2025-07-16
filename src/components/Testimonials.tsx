@@ -149,7 +149,7 @@ const Testimonials = () => {
     <section className="py-12 md:py-16">
       <div className="mx-auto">
         {/* Header */}
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-0">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-0" data-aos="fade-up">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-3 md:mb-4">
               Apa Kata Mereka
@@ -179,7 +179,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Container */}
-        <div className="relative">
+        <div className="relative" data-aos="fade-up" data-aos-delay="200">
           <div
             ref={scrollContainerRef}
             className="flex gap-4 md:gap-6 overflow-x-auto md:overflow-x-hidden scroll-smooth px-6 md:pl-[7.5rem] pb-12 touch-pan-x"

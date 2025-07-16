@@ -6,7 +6,7 @@ const AboutUs = () => {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-semibold text-gray-800">
             Dari Kebun Kecil,<br />
             Mimpi Besar Itu Tumbuh
@@ -16,7 +16,7 @@ const AboutUs = () => {
         {/* Main Content - Parent div with 2 child divs */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {/* Left Child Div */}
-          <div className="relative">
+          <div className="relative" data-aos="fade-right" data-aos-delay="200">
             <div className="rounded-2xl overflow-hidden h-96 relative">
               <img 
                 src="https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
@@ -39,7 +39,7 @@ const AboutUs = () => {
           </div>
 
           {/* Right Child Div */}
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="fade-left" data-aos-delay="300">
             {/* Top Image */}
             <div className="rounded-2xl overflow-hidden h-56">
               <img 
@@ -70,7 +70,7 @@ const AboutUs = () => {
         </div>
 
         {/* Quote Section */}
-        <div className="flex justify-center py-12">
+        <div className="flex justify-center py-12" data-aos="fade-up" data-aos-delay="400">
           <div className="bg-gray-200 rounded-3xl px-12 py-16 w-full">
             <div className="text-center">
               {/* Quote Icons */}
