@@ -22,19 +22,19 @@ const WhyVisit = () => {
   ];
 
   return (
-    <section className="relative py-16 bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-900 overflow-hidden">
+    <section className="relative py-16 bg-darkGreen overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Kenapa Harus ke Kitala?
           </h2>
-          <p className="text-base md:text-lg text-emerald-100 max-w-2xl mx-auto px-4">
+          <p className="text-base md:text-lg text-white max-w-2xl mx-auto px-4">
             Lebih dari sekadar petik stroberi. Inilah pengalaman yang hanya bisa 
             kamu temukan di sini
           </p>

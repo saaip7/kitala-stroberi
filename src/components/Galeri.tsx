@@ -60,7 +60,7 @@ const Gallery = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-12 gap-6">
           <div>
