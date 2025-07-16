@@ -28,17 +28,17 @@ const Articles = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-12 md:py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
-        <div className="flex justify-between items-start mb-12">
+        <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12 gap-4 md:gap-0">
           <div>
-            <h2 className="text-4xl md:text-5xl font-semibold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 mb-3 md:mb-4">
               Cerita dari Kebun
             </h2>
           </div>
-          <div className="text-right max-w-md">
-            <p className="text-gray-600 leading-relaxed">
+          <div className="text-left md:text-right max-w-md">
+            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
               Ikuti kisah-kisah kami — dari kegiatan sehari-hari, hingga 
               perjuangan dan pencapaian para pengelola
             </p>
@@ -46,11 +46,11 @@ const Articles = () => {
         </div>
 
         {/* Articles Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
           {articles.map((article) => (
             <div key={article.id} className="group cursor-pointer">
               {/* Article Image */}
-              <div className="rounded-2xl overflow-hidden mb-6 h-64">
+              <div className="rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-6 h-48 md:h-64">
                 <img
                   src={article.image}
                   alt={article.title}
@@ -59,8 +59,8 @@ const Articles = () => {
               </div>
 
               {/* Article Content */}
-              <div className="space-y-4">
-                <h3 className="text-xl font-bold text-gray-800 group-hover:text-emerald-700 transition-colors duration-200">
+              <div className="space-y-3 md:space-y-4">
+                <h3 className="text-lg md:text-xl font-bold text-gray-800 group-hover:text-emerald-700 transition-colors duration-200">
                   {article.title}
                 </h3>
                 
@@ -80,7 +80,7 @@ const Articles = () => {
 
         {/* View All Articles Button */}
         <div className="flex justify-center">
-          <button className="bg-darkGreen hover:bg-emerald-800 text-white px-8 py-3 rounded-full transition-all duration-200 font-medium text-[14px]">
+          <button className="bg-darkGreen hover:bg-emerald-800 text-white px-6 md:px-8 py-3 rounded-full transition-all duration-200 font-medium text-sm md:text-[14px] w-full md:w-auto">
             <a href="/artikel">
               <span>LIHAT SEMUA ARTIKEL</span>
             </a>

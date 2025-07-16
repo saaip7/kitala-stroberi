@@ -1,6 +1,6 @@
-import React from 'react';
-import { ArrowRight, Clock, Ticket } from 'lucide-react';
-import { AiFillInstagram, AiOutlineTikTok } from 'react-icons/ai';
+import React from "react";
+import { ArrowRight, Clock, Ticket } from "lucide-react";
+import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 
 const Hero = () => {
   return (
@@ -23,21 +23,19 @@ const Hero = () => {
             <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent backdrop-blur-[1px]"></div>
           </div>
 
-          
-
           {/* Content */}
           <div className="absolute bottom-0 left-0 right-0 z-20 pb-8">
             <div className="w-full px-6 md:px-8 lg:px-12">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-8 items-end">
                 {/* Mobile Price Badge - Only visible on mobile */}
-          <div className="md:hidden">
-            <div className="bg-white backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 w-[fit-content]">
-              <Ticket className="w-4 h-4 text-red-500" />
-              <span className="text-sm font-medium text-black">
-                Petik stroberi mulai Rp15.000
-              </span>
-            </div>
-          </div>
+                <div className="md:hidden">
+                  <div className="bg-white backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 w-[fit-content]">
+                    <Ticket className="w-4 h-4 text-red-500" />
+                    <span className="text-sm font-medium text-black">
+                      Petik stroberi mulai Rp15.000
+                    </span>
+                  </div>
+                </div>
                 {/* Left Content */}
                 <div className="lg:col-span-7 text-white">
                   <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-4 md:mb-6 font-sans leading-tight">

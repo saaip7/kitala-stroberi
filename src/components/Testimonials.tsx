@@ -1,11 +1,61 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if device is mobile
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Handle touch scroll on mobile
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container || !isMobile) return;
+
+    let isScrolling = false;
+    let startX = 0;
+    let scrollLeft = 0;
+
+    const handleTouchStart = (e: TouchEvent) => {
+      isScrolling = true;
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isScrolling) return;
+      e.preventDefault();
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = (x - startX) * 2;
+      container.scrollLeft = scrollLeft - walk;
+    };
+
+    const handleTouchEnd = () => {
+      isScrolling = false;
+    };
+
+    container.addEventListener('touchstart', handleTouchStart, { passive: true });
+    container.addEventListener('touchmove', handleTouchMove, { passive: false });
+    container.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      container.removeEventListener('touchstart', handleTouchStart);
+      container.removeEventListener('touchmove', handleTouchMove);
+      container.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [isMobile]);
 
   // Dummy testimonial data
   const testimonials = [
@@ -68,14 +118,17 @@ const Testimonials = () => {
   };
 
   const nextTestimonial = () => {
-    const maxIndex = testimonials.length - 3; // Show 3 cards at once
+    // Mobile: show 1 card, Desktop: show 3 cards
+    const cardsVisible = window.innerWidth < 768 ? 1 : 3;
+    const maxIndex = testimonials.length - cardsVisible;
     const newIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
     setCurrentIndex(newIndex);
     scrollToIndex(newIndex);
   };
 
   const prevTestimonial = () => {
-    const maxIndex = testimonials.length - 3;
+    const cardsVisible = window.innerWidth < 768 ? 1 : 3;
+    const maxIndex = testimonials.length - cardsVisible;
     const newIndex = currentIndex > 0 ? currentIndex - 1 : maxIndex;
     setCurrentIndex(newIndex);
     scrollToIndex(newIndex);
@@ -93,34 +146,34 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-16">
-      <div className=" mx-auto">
+    <section className="py-12 md:py-16">
+      <div className="mx-auto">
         {/* Header */}
-        <div className="max-w-7xl mx-auto flex justify-between items-end mb-12">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-0">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-semibold text-black mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-3 md:mb-4">
               Apa Kata Mereka
             </h2>
-            <p className="text-lg text-gray">
+            <p className="text-base md:text-lg text-gray">
               Berbagai kesan dari pengunjung yang merasakan sendiri 
               kehangatan dan keunikan Kebun Kitala
             </p>
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex gap-2">
+          <div className="flex gap-2 self-end md:self-auto">
             <button
               onClick={prevTestimonial}
-              className="w-12 h-12 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center transition-all duration-200 group shadow-sm"
+              className="w-10 h-10 md:w-12 md:h-12 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center transition-all duration-200 group shadow-sm"
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-gray-800" />
+              <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-gray-800" />
             </button>
             
             <button
               onClick={nextTestimonial}
-              className="w-12 h-12 bg-darkGreen hover:bg-emerald-800 rounded-lg flex items-center justify-center transition-all duration-200 group shadow-lg"
+              className="w-10 h-10 md:w-12 md:h-12 bg-darkGreen hover:bg-emerald-800 rounded-lg flex items-center justify-center transition-all duration-200 group shadow-lg"
             >
-              <ChevronRight className="w-5 h-5 text-white" />
+              <ChevronRight className="w-4 h-4 md:w-5 md:h-5 text-white" />
             </button>
           </div>
         </div>
@@ -129,23 +182,27 @@ const Testimonials = () => {
         <div className="relative">
           <div
             ref={scrollContainerRef}
-            className="flex gap-6 overflow-x-hidden scroll-smooth pl-[7.5rem] pb-12"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex gap-4 md:gap-6 overflow-x-auto md:overflow-x-hidden scroll-smooth px-6 md:pl-[7.5rem] pb-12 touch-pan-x"
+            style={{ 
+              scrollbarWidth: 'none', 
+              msOverflowStyle: 'none',
+              WebkitOverflowScrolling: 'touch'
+            }}
           >
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="flex-shrink-0 w-80 bg-[#F5F5F5] rounded-2xl p-6"
+                className="flex-shrink-0 w-72 md:w-80 bg-[#F5F5F5] rounded-xl md:rounded-2xl p-4 md:p-6"
               >
                 {/* Testimonial Text */}
-                <p className="text-gray-600 leading-relaxed mb-6 text-sm">
+                <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 text-sm">
                   {testimonial.text}
                 </p>
 
                 {/* User Info */}
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-3 md:gap-4">
                   {/* Avatar */}
-                  <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
                     <img
                       src={testimonial.avatar}
                       alt={testimonial.name}
@@ -155,7 +212,7 @@ const Testimonials = () => {
 
                   <div className="flex-1">
                     {/* Name */}
-                    <h4 className="font-semibold text-gray-800 mb-1">
+                    <h4 className="font-semibold text-gray-800 mb-1 text-sm md:text-base">
                       {testimonial.name}
                     </h4>
 

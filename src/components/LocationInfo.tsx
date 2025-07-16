@@ -15,33 +15,33 @@ const LocationInfo = () => {
     : '';
 
   return (
-    <section className="py-16 bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <section className="py-12 md:py-16 bg-gradient-to-br from-emerald-800 via-emerald-700 to-emerald-900">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
           {/* Left Side - Information */}
           <div className="text-white">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
               Informasi Kunjungan
             </h2>
             
-            <p className="text-lg text-white mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-white mb-6 md:mb-8 leading-relaxed">
               Sebelum kamu datang ke Kebun Kitala, berikut 
               informasi penting yang perlu kamu tahu
             </p>
 
             {/* Information Cards */}
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {/* Operating Hours Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-emerald-600" />
+              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-emerald-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">
                       Jam Operasional
                     </h3>
-                    <div className="space-y-1 text-gray-600">
+                    <div className="space-y-1 text-gray-600 text-sm md:text-base">
                       <p>Senin–Jumat: 08.00–16.00</p>
                       <p>Sabtu–Minggu: 08.00–17.00</p>
                     </div>
@@ -50,16 +50,16 @@ const LocationInfo = () => {
               </div>
 
               {/* Ticket Price Card */}
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <DollarSign className="w-6 h-6 text-red-500" />
+              <div className="bg-white rounded-xl md:rounded-2xl p-4 md:p-6 shadow-lg">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                    <DollarSign className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">
                       Harga Tiket
                     </h3>
-                    <div className="space-y-1 text-gray-600">
+                    <div className="space-y-1 text-gray-600 text-sm md:text-base">
                       <p>Masuk Kebun: Rp15.000 / orang</p>
                       <p>Petik Stroberi: Rp20.000 / kg</p>
                     </div>
@@ -70,8 +70,8 @@ const LocationInfo = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="lg:pl-8">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-2xl h-96 lg:h-[500px]">
+          <div className="lg:pl-8 mt-6 lg:mt-0">
+            <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl h-64 md:h-80 lg:h-[500px]">
               {GOOGLE_MAPS_API_KEY && mapEmbedUrl ? (
                 // Google Maps Embed
                 <iframe
