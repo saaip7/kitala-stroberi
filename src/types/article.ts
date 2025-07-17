@@ -29,7 +29,7 @@ export interface Article {
     url: string;
     previewUrl?: string;
     provider: string;
-    provider_metadata?: any;
+    provider_metadata?: Record<string, unknown>;
     createdAt: string;
     updatedAt: string;
   };
@@ -92,6 +92,6 @@ export interface StrapiError {
     status: number;
     name: string;
     message: string;
-    details: any;
+    details: Record<string, unknown>;
   };
 }

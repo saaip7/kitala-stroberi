@@ -29,7 +29,7 @@ const ArticleDetail = () => {
       setError(null);
       
       // Try to fetch by slug first
-      let response = await strapiApi.getArticleBySlug(articleSlug);
+      const response = await strapiApi.getArticleBySlug(articleSlug);
       
       // If no article found by slug, try by ID (in case slug is actually an ID)
       if (!response.data || response.data.length === 0) {

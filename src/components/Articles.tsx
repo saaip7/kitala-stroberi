@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 const Articles = () => {
@@ -80,11 +81,9 @@ const Articles = () => {
 
         {/* View All Articles Button */}
         <div className="flex justify-center">
-          <button className="bg-darkGreen hover:bg-emerald-800 text-white px-6 md:px-8 py-3 rounded-full transition-all duration-200 font-medium text-sm md:text-[14px] w-full md:w-auto">
-            <a href="/artikel">
-              <span>LIHAT SEMUA ARTIKEL</span>
-            </a>
-          </button>
+          <Link href="/artikel" className="bg-darkGreen hover:bg-emerald-800 text-white px-6 md:px-8 py-3 rounded-full transition-all duration-200 font-medium text-sm md:text-[14px] w-full md:w-auto block text-center">
+            LIHAT SEMUA ARTIKEL
+          </Link>
         </div>
       </div>
     </section>

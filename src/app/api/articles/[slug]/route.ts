@@ -5,7 +5,7 @@ const STRAPI_TOKEN = process.env.STRAPI_API_TOKEN; // Server-side only
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
     const { slug } = await params;

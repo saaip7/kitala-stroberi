@@ -1,4 +1,4 @@
-import { Article, StrapiResponse, StrapiError } from '../types/article';
+import { Article, StrapiResponse } from '../types/article';
 
 const API_URL = process.env.NEXT_PUBLIC_STRAPI_URL || 'http://localhost:1337';
 

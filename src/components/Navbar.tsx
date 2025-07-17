@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -16,7 +17,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <div className="flex items-center space-x-2 w-[110px] h-[50px]">
               <Image 
                 src="/Logo.png" 
@@ -27,34 +28,34 @@ const Navbar = () => {
                 className="hover:scale-105 transition-transform duration-200 object-contain w-full h-full"
               />
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a
+            <Link
               href="/"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
               Beranda
-            </a>
-            <a
+            </Link>
+            <Link
               href="/galeri"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
               Galeri
-            </a>
-            <a
+            </Link>
+            <Link
               href="/tentang-kami"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
               Tentang Kami
-            </a>
-            <a
+            </Link>
+            <Link
               href="/artikel"
               className="text-gray-700 hover:text-red-500 transition-colors duration-200 font-medium"
             >
               Artikel
-            </a>
+            </Link>
           </div>
 
           {/* Desktop CTA Button */}
@@ -85,34 +86,34 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full right-4 mt-2 w-64 bg-white rounded-2xl shadow-xl border border-gray-200 py-4 z-50">
             <div className="flex flex-col space-y-1">
-              <a
+              <Link
                 href="/"
                 className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Beranda
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/galeri"
                 className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Galeri
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/tentang-kami"
                 className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Tentang Kami
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/artikel"
                 className="text-gray-700 hover:text-red-500 hover:bg-gray-50 transition-all duration-200 font-medium px-6 py-3 rounded-lg mx-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Artikel
-              </a>
+              </Link>
               
               {/* Mobile CTA Button */}
               <div className="px-2 pt-2">

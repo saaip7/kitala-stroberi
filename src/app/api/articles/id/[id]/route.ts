@@ -5,10 +5,10 @@ const STRAPI_TOKEN = process.env.STRAPI_API_TOKEN; // Server-side only
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const id = params.id;
+    const { id } = await params;
     
     const headers: HeadersInit = {
       'Content-Type': 'application/json',

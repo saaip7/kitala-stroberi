@@ -20,7 +20,7 @@ const ArticlesPage = () => {
 
   useEffect(() => {
     fetchArticles(currentPage);
-  }, [currentPage]);
+  }, [currentPage]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const fetchArticles = async (page: number) => {
     try {
