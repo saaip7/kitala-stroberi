@@ -14,34 +14,51 @@ const Gallery = () => {
       {
         id: 1,
         src: "/galeri/1.jpg",
-        alt: "Strawberry plants in garden"
+        alt: "Stroberi di kebun"
       },
       {
         id: 2,
         src: "/galeri/2.jpg",
-        alt: "Fresh strawberries close up"
+        alt: "Stroberi segar dekat"
       },
       {
         id: 3,
         src: "/galeri/3.jpeg",
-        alt: "Strawberries in basket"
+        alt: "Stroberi Merah"
       }
     ],
     [
       {
         id: 4,
         src: "/galeri/4.jpg",
-        alt: "Strawberry field view"
+        alt: "Stroberi di ladang"
       },
       {
         id: 5,
         src: "/galeri/5.jpeg",
-        alt: "Picking strawberries"
+        alt: "Stroberi di keranjang"
       },
       {
         id: 6,
         src: "/galeri/6.jpg",
-        alt: "Strawberry harvest"
+        alt: "Banyak stroberi di kebun"
+      }
+    ],
+    [
+      {
+        id: 7,
+        src: "/galeri/7.jpg",
+        alt: "Memetik stroberi"
+      },
+      {
+        id: 8,
+        src: "/galeri/8.jpg",
+        alt: "Lahan stroberi luas"
+      },
+      {
+        id: 9,
+        src: "/galeri/9.jpg",
+        alt: "Memetik stroberi"
       }
     ]
   ];

@@ -1,23 +1,23 @@
 import React from 'react';
-import { Car, Heart, Users } from 'lucide-react';
+import { Map, Leaf, Car } from 'lucide-react';
 import Image from 'next/image';
 
 const WhyVisit = () => {
   const features = [
     {
+      icon: Map,
+      title: "Lahan yang Lega",
+      description: "Nikmati pengalaman memetik stroberi di kebun yang luas dan tertata."
+    },
+    {
+      icon: Leaf,
+      title: "Udara Sejuk dan Asri",
+      description: "Terletak di dataran tinggi, Kitala menawarkan udara segar, rindang pepohonan, dan nuansa tenang yang cocok untuk healing alami."
+    },
+    {
       icon: Car,
-      title: "Parkiran Luas",
-      description: "Lorem ipsum dolor sit amet consectetur. Nulla in mattis egestas massa cursus."
-    },
-    {
-      icon: Heart,
-      title: "Parkiran Luas",
-      description: "Lorem ipsum dolor sit amet consectetur. Nulla in mattis egestas massa cursus."
-    },
-    {
-      icon: Users,
-      title: "Parkiran Luas",
-      description: "Lorem ipsum dolor sit amet consectetur. Nulla in mattis egestas massa cursus."
+      title: "Parkir Tanpa Repot",
+      description: "Akses mudah dengan area parkir yang luas untuk motor, mobil, hingga bus."
     }
   ];
 
@@ -35,8 +35,7 @@ const WhyVisit = () => {
             Kenapa Harus ke Kitala?
           </h2>
           <p className="text-base md:text-lg text-white max-w-2xl mx-auto px-4">
-            Lebih dari sekadar petik stroberi. Inilah pengalaman yang hanya bisa 
-            kamu temukan di sini
+            Tempat wisata ramah, teduh, dan menyenangkan — untuk semua kalangan
           </p>
         </div>
 
