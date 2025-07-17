@@ -12,7 +12,7 @@ const AboutUsPage = () => {
             <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
               Tentang Kami
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray max-w-2xl mx-auto">
               Mengenal lebih dekat perjalanan kami dalam memberdayakan 
               masyarakat melalui kebun stroberi yang penuh makna
             </p>
@@ -35,31 +35,27 @@ const AboutUsPage = () => {
                 Yayasan Rehabilitasi Mental Al-Hafish
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Didirikan dengan misi mulia untuk memberikan harapan baru bagi para penyandang 
-                disabilitas mental. Yayasan Al-Hafish telah menjadi rumah bagi mereka yang 
-                membutuhkan dukungan, perawatan, dan pemberdayaan.
+              <p className="text-gray leading-relaxed">
+                Yayasan Rehabilitasi Mental Al-Hafish adalah lembaga yang berdiri dengan <strong>komitmen kuat</strong> untuk mendampingi individu dengan gangguan kesehatan mental melalui pendekatan psikososial dan pemberdayaan ekonomi. 
+                Terletak di Jalan Raya Suko No. 60, Sidoarjo, yayasan ini menjadi <strong>ruang aman dan produktif</strong> bagi mereka yang membutuhkan dukungan pemulihan.
               </p>
               
-              <p className="text-gray-600 leading-relaxed">
-                Dengan pendekatan holistik yang menggabungkan terapi, pendampingan, dan 
-                program pemberdayaan ekonomi, kami percaya bahwa setiap individu memiliki 
-                potensi untuk berkembang dan mandiri. Kebun Stroberi Kitala adalah salah 
-                satu wujud nyata dari komitmen kami dalam menciptakan peluang kerja dan 
-                kemandirian bagi para pengasuh dan anak asuh.
+              <p className="text-gray leading-relaxed">
+                Dengan fokus pada rehabilitasi psikososial, yayasan ini menggabungkan terapi, pelatihan keterampilan, dan kegiatan produktif sebagai bagian dari proses pemulihan. Melalui pendekatan ini, kami percaya bahwa setiap individu memiliki <strong>potensi untuk berkembang, mandiri, dan berdaya</strong>.
+                Yayasan Al-Hafish juga legal dan aktif bekerja sama dengan berbagai institusi pendidikan dan komunitas, untuk memastikan proses rehabilitasi berjalan <strong>inklusif dan berkelanjutan</strong>.
               </p>
 
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-6 pt-6">
+              {/* <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center">
                   <div className="text-3xl font-semibold text-emerald-600 mb-2">50+</div>
-                  <div className="text-sm text-gray-600">Anak Asuh Terdampingi</div>
+                  <div className="text-sm text-gray">Anak Asuh Terdampingi</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-semibold text-emerald-600 mb-2">10+</div>
-                  <div className="text-sm text-gray-600">Tahun Pengalaman</div>
+                  <div className="text-sm text-gray">Tahun Pengalaman</div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Image */}
@@ -72,22 +68,6 @@ const AboutUsPage = () => {
                     fill
                     className="object-cover"
                   />
-                </div>
-                
-                {/* Floating Card */}
-                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-6 shadow-xl max-w-xs">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center">
-                      <Users className="w-5 h-5 text-emerald-600" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-black">Komunitas</div>
-                      <div className="text-sm text-gray-600">Saling Mendukung</div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    Membangun lingkungan yang inklusif dan penuh kasih
-                  </p>
                 </div>
               </div>
             </div>
@@ -104,27 +84,11 @@ const AboutUsPage = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                    src="/galeripage/lahan.jpg"
                     alt="Kebun Stroberi Kitala"
                     fill
                     className="object-cover"
                   />
-                </div>
-                
-                {/* Floating Card */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 shadow-xl max-w-xs">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-                      <Target className="w-5 h-5 text-red-600" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-black">Kemandirian</div>
-                      <div className="text-sm text-gray-600">Melalui Pertanian</div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-600">
-                    Menciptakan peluang ekonomi yang berkelanjutan
-                  </p>
                 </div>
               </div>
             </div>
@@ -140,23 +104,23 @@ const AboutUsPage = () => {
                 Dari Kebun Kecil, Mimpi Besar Itu Tumbuh
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-gray leading-relaxed">
                 Kebun Stroberi Kitala bukan sekadar tempat wisata petik buah. Ini adalah 
-                manifestasi dari impian besar untuk menciptakan kemandirian ekonomi bagi 
+                manifestasi dari <strong>impian besar</strong> untuk menciptakan <strong>kemandirian ekonomi</strong> bagi 
                 para pengasuh dan anak asuh Yayasan Al-Hafish.
               </p>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray leading-relaxed">
                 Dimulai dari lahan kecil di Tulungrejo, Bumiaji, Batu, kebun ini kini 
-                telah menjadi sumber penghasilan yang berkelanjutan. Setiap stroberi yang 
+                telah menjadi <strong>sumber penghasilan yang berkelanjutan</strong>. Setiap stroberi yang 
                 dipetik pengunjung tidak hanya memberikan kebahagiaan, tetapi juga 
                 mendukung program rehabilitasi dan pemberdayaan yang kami jalankan.
               </p>
 
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray leading-relaxed">
                 Dengan menggabungkan terapi hortikultura dan pemberdayaan ekonomi, 
                 Kebun Kitala membuktikan bahwa dengan dukungan yang tepat, setiap 
-                individu dapat berkontribusi dan mandiri.
+                individu dapat <strong>berkontribusi dan mandiri</strong>.
               </p>
 
               {/* Features */}
