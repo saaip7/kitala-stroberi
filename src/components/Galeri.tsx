@@ -13,34 +13,34 @@ const Gallery = () => {
     [
       {
         id: 1,
-        src: "https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/galeri/1.jpg",
         alt: "Strawberry plants in garden"
       },
       {
         id: 2,
-        src: "https://images.pexels.com/photos/1122408/pexels-photo-1122408.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/galeri/2.jpg",
         alt: "Fresh strawberries close up"
       },
       {
         id: 3,
-        src: "https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/galeri/3.jpeg",
         alt: "Strawberries in basket"
       }
     ],
     [
       {
         id: 4,
-        src: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/galeri/4.jpg",
         alt: "Strawberry field view"
       },
       {
         id: 5,
-        src: "https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/galeri/5.jpeg",
         alt: "Picking strawberries"
       },
       {
         id: 6,
-        src: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+        src: "/galeri/6.jpg",
         alt: "Strawberry harvest"
       }
     ]
@@ -60,7 +60,7 @@ const Gallery = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-8 md:px-0">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-8 md:mb-12 gap-6" data-aos="fade-up">
           <div>
