@@ -166,7 +166,7 @@ const Testimonials = () => {
               onClick={prevTestimonial}
               className="w-10 h-10 md:w-12 md:h-12 bg-white hover:bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center transition-all duration-200 group shadow-sm"
             >
-              <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-gray-800" />
+              <ChevronLeft className="w-4 h-4 md:w-5 md:h-5 text-gray-600 group-hover:text-black" />
             </button>
             
             <button
@@ -212,7 +212,7 @@ const Testimonials = () => {
 
                   <div className="flex-1">
                     {/* Name */}
-                    <h4 className="font-semibold text-gray-800 mb-1 text-sm md:text-base">
+                    <h4 className="font-semibold text-black mb-1 text-sm md:text-base">
                       {testimonial.name}
                     </h4>
 

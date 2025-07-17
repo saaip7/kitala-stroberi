@@ -62,7 +62,7 @@ const Navbar = () => {
             href="https://wa.me/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex bg-white hover:bg-gray-50 border border-gray-300 border-2 text-gray-800 hover:text-red-500 px-4 py-2 rounded-full transition-all duration-200 font-medium items-center justify-center"
+            className="hidden md:flex bg-white hover:bg-gray-50 border border-gray-300 border-2 text-black hover:text-red-500 px-4 py-2 rounded-full transition-all duration-200 font-medium items-center justify-center"
           >
             Hubungi Kami
           </a>

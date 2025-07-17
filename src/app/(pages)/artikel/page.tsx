@@ -178,7 +178,7 @@ const ArticlesPage = () => {
                       </div>
 
                       {/* Article Title */}
-                      <h2 className="text-xl font-semibold text-gray-800 mb-3 line-clamp-1  ">
+                      <h2 className="text-xl font-semibold text-black mb-3 line-clamp-1  ">
                         {article.judul}
                       </h2>
 

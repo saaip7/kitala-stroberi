@@ -181,7 +181,7 @@ const ArticleDetail = () => {
           </div>
 
           {/* Article Title */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight mb-6">
             {article.judul}
           </h1>
         </div>
@@ -194,12 +194,12 @@ const ArticleDetail = () => {
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
               components={{
-                h1: ({children}) => <h1 className="text-3xl font-bold text-gray-800 mt-8 mb-4 leading-tight">{children}</h1>,
-                h2: ({children}) => <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-3 leading-tight">{children}</h2>,
-                h3: ({children}) => <h3 className="text-xl font-semibold text-gray-800 mt-5 mb-2 leading-tight">{children}</h3>,
-                h4: ({children}) => <h4 className="text-lg font-semibold text-gray-800 mt-4 mb-2">{children}</h4>,
-                h5: ({children}) => <h5 className="text-base font-semibold text-gray-800 mt-3 mb-1">{children}</h5>,
-                h6: ({children}) => <h6 className="text-sm font-semibold text-gray-800 mt-3 mb-1">{children}</h6>,
+                h1: ({children}) => <h1 className="text-3xl font-bold text-black mt-8 mb-4 leading-tight">{children}</h1>,
+                h2: ({children}) => <h2 className="text-2xl font-semibold text-black mt-6 mb-3 leading-tight">{children}</h2>,
+                h3: ({children}) => <h3 className="text-xl font-semibold text-black mt-5 mb-2 leading-tight">{children}</h3>,
+                h4: ({children}) => <h4 className="text-lg font-semibold text-black mt-4 mb-2">{children}</h4>,
+                h5: ({children}) => <h5 className="text-base font-semibold text-black mt-3 mb-1">{children}</h5>,
+                h6: ({children}) => <h6 className="text-sm font-semibold text-black mt-3 mb-1">{children}</h6>,
                 p: ({children}) => <p className="text-gray-700 mb-4 leading-relaxed text-base">{children}</p>,
                 ul: ({children}) => <ul className="list-disc list-inside mb-4 text-gray-700 pl-4">{children}</ul>,
                 ol: ({children}) => <ol className="list-decimal list-inside mb-4 text-gray-700 pl-4">{children}</ol>,
@@ -210,7 +210,7 @@ const ArticleDetail = () => {
                   </blockquote>
                 ),
                 code: ({children}) => (
-                  <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800 border">
+                  <code className="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-black border">
                     {children}
                   </code>
                 ),
@@ -245,7 +245,7 @@ const ArticleDetail = () => {
                     )}
                   </div>
                 ),
-                strong: ({children}) => <strong className="font-semibold text-gray-800">{children}</strong>,
+                strong: ({children}) => <strong className="font-semibold text-black">{children}</strong>,
                 em: ({children}) => <em className="italic text-gray-700">{children}</em>,
                 hr: () => <hr className="my-8 border-gray-300" />,
                 table: ({children}) => (
@@ -259,7 +259,7 @@ const ArticleDetail = () => {
                 tbody: ({children}) => <tbody className="bg-white">{children}</tbody>,
                 tr: ({children}) => <tr className="border-b border-gray-200">{children}</tr>,
                 th: ({children}) => (
-                  <th className="px-4 py-2 text-left font-semibold text-gray-800 border-r border-gray-200 last:border-r-0">
+                  <th className="px-4 py-2 text-left font-semibold text-black border-r border-gray-200 last:border-r-0">
                     {children}
                   </th>
                 ),
@@ -282,7 +282,7 @@ const ArticleDetail = () => {
           <div className="bg-white rounded-2xl p-6 shadow-lg">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                <h3 className="text-lg font-semibold text-black mb-2">
                   Bagikan artikel ini
                 </h3>
                 <p className="text-gray-600 text-sm">
@@ -304,7 +304,7 @@ const ArticleDetail = () => {
           <div className="text-left mt-8">
             <Link 
               href="/artikel"
-              className="inline-flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center gap-2 bg-gray-200 hover:bg-gray-300 text-black px-6 py-3 rounded-lg transition-colors duration-200"
             >
               <ArrowLeft className="w-4 h-4" />
               Lihat Artikel Lainnya

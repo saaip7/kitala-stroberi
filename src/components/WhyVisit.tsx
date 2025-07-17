@@ -31,7 +31,7 @@ const WhyVisit = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
             Kenapa Harus ke Kitala?
           </h2>
           <p className="text-base md:text-lg text-white max-w-2xl mx-auto px-4">
@@ -73,7 +73,7 @@ const WhyVisit = () => {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">
+                    <h3 className="text-lg md:text-xl font-semibold text-black mb-2 md:mb-3">
                       {feature.title}
                     </h3>
                     <p className="text-sm md:text-base text-gray-600 leading-relaxed">

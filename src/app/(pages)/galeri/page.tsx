@@ -146,7 +146,7 @@ const GalleryPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
               Galeri Kebun Kitala
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -184,7 +184,7 @@ const GalleryPage = () => {
                   
                   {/* Content */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{image.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-semibold mb-2">{image.title}</h3>
                     <p className="text-lg text-gray-200 max-w-2xl">{image.description}</p>
                   </div>
                 </div>
@@ -240,7 +240,7 @@ const GalleryPage = () => {
       <section className="py-16 pb-[20vh] bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold text-black mb-4">
               Koleksi Foto Lainnya
             </h2>
             <p className="text-gray-600">

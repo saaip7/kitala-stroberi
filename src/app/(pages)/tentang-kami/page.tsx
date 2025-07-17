@@ -9,7 +9,7 @@ const AboutUsPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
               Tentang Kami
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -31,7 +31,7 @@ const AboutUsPage = () => {
                 Yayasan Rehabilitasi Mental
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black leading-tight">
                 Yayasan Rehabilitasi Mental Al-Hafish
               </h2>
               
@@ -52,11 +52,11 @@ const AboutUsPage = () => {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">50+</div>
+                  <div className="text-3xl font-semibold text-emerald-600 mb-2">50+</div>
                   <div className="text-sm text-gray-600">Anak Asuh Terdampingi</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-emerald-600 mb-2">10+</div>
+                  <div className="text-3xl font-semibold text-emerald-600 mb-2">10+</div>
                   <div className="text-sm text-gray-600">Tahun Pengalaman</div>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const AboutUsPage = () => {
                       <Users className="w-5 h-5 text-emerald-600" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-800">Komunitas</div>
+                      <div className="font-semibold text-black">Komunitas</div>
                       <div className="text-sm text-gray-600">Saling Mendukung</div>
                     </div>
                   </div>
@@ -118,7 +118,7 @@ const AboutUsPage = () => {
                       <Target className="w-5 h-5 text-red-600" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-800">Kemandirian</div>
+                      <div className="font-semibold text-black">Kemandirian</div>
                       <div className="text-sm text-gray-600">Melalui Pertanian</div>
                     </div>
                   </div>
@@ -136,7 +136,7 @@ const AboutUsPage = () => {
                 Kebun Stroberi Kitala
               </div>
               
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-semibold text-black leading-tight">
                 Dari Kebun Kecil, Mimpi Besar Itu Tumbuh
               </h2>
               
@@ -209,7 +209,7 @@ const AboutUsPage = () => {
             <div className="w-16 h-0.5 bg-gray-400 mx-auto mb-6"></div>
 
             <div>
-              <p className="text-lg font-semibold text-gray-800 mb-1">Bapak Shodikin</p>
+              <p className="text-lg font-semibold text-black mb-1">Bapak Shodikin</p>
               <p className="text-sm text-gray-500">Pendiri Yayasan Al-Hafish & Kebun Stroberi Kitala</p>
             </div>
           </div>

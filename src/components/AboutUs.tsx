@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="mb-12" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-semibold text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-semibold text-black">
             Dari Kebun Kecil,<br />
             Mimpi Besar Itu Tumbuh
           </h2>
@@ -94,7 +94,7 @@ const AboutUs = () => {
 
               {/* Author */}
               <div className="text-center">
-                <p className="text-lg font-semibold text-gray-800 mb-1">Bapak Shodikin</p>
+                <p className="text-lg font-semibold text-black mb-1">Bapak Shodikin</p>
                 <p className="text-sm text-gray-500">Pendiri Kebun Stroberi Kitala</p>
               </div>
             </div>

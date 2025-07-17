@@ -62,9 +62,9 @@ const Gallery = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-8 md:mb-12 gap-6" data-aos="fade-up">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-8 md:mb-12 gap-6" data-aos="fade-up">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4">
               Potret dari<br />
               Kebun Kitala
             </h2>
@@ -115,12 +115,15 @@ const Gallery = () => {
 
           {/* Navigation Buttons */}
           <div className="flex justify-center md:justify-end gap-2">
+            <a href="/galeri" className="text-sm md:text-base text-gray-600 hover:text-black transition-colors duration-200 bg-gray-100 hover:bg-gray-200 rounded-lg px-8 flex items-center">
+              Lihat Semua
+            </a>
             <button
               onClick={prevSlide}
               className="w-12 h-12 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-all duration-200 group disabled:opacity-50 disabled:cursor-not-allowed"
               disabled={currentSlide === 0}
             >
-              <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-gray-800" />
+              <ChevronLeft className="w-5 h-5 text-gray-600 group-hover:text-black" />
             </button>
             
             <button

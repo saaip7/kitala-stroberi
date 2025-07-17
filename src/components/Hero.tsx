@@ -38,7 +38,7 @@ const Hero = () => {
                 </div>
                 {/* Left Content */}
                 <div className="lg:col-span-7 text-white" data-aos="fade-right" data-aos-delay="300">
-                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-4 md:mb-6 font-sans leading-tight">
+                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-semibold mb-4 md:mb-6 font-sans">
                     Petik Buahnya
                     <br />
                     Bantu Tumbuh
@@ -69,7 +69,7 @@ const Hero = () => {
                       href="https://wa.me/6281234567890"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 md:px-8 py-3 rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30"
+                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 md:px-8 flex items-center rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30"
                     >
                       HUBUNGI
                     </a>
@@ -100,7 +100,7 @@ const Hero = () => {
 
                   <div className="w-full max-w-md bg-white/95 backdrop-blur-sm rounded-2xl p-4 flex flex-row gap-6">
                     <div className="flex-none font-sans">
-                      <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                      <h3 className="text-xl font-semibold text-black mb-2">
                         Informasi
                       </h3>
 
@@ -109,7 +109,7 @@ const Hero = () => {
                           <Ticket className="w-5 h-5 text-red-500 mt-0.5" />
                           <div>
                             <p className="text-gray-600 text-sm">Tiket</p>
-                            <p className="font-semibold text-gray-800">
+                            <p className="font-semibold text-black">
                               15 Ribu /pax
                             </p>
                           </div>
@@ -119,7 +119,7 @@ const Hero = () => {
                           <Clock className="w-5 h-5 text-red-500 mt-0.5" />
                           <div>
                             <p className="text-gray-600 text-sm">Jam Buka</p>
-                            <p className="font-semibold text-gray-800">
+                            <p className="font-semibold text-black">
                               07.00 - 17.00
                             </p>
                           </div>

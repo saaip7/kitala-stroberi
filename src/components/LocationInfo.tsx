@@ -26,7 +26,7 @@ const LocationInfo = () => {
                     <Clock className="w-5 h-5 md:w-6 md:h-6 text-emerald-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">
+                    <h3 className="text-lg md:text-xl font-semibold text-black mb-2 md:mb-3">
                       Jam Operasional
                     </h3>
                     <div className="space-y-1 text-gray-600 text-sm md:text-base">
@@ -52,7 +52,7 @@ const LocationInfo = () => {
                     <DollarSign className="w-5 h-5 md:w-6 md:h-6 text-red-500" />
                   </div>
                   <div>
-                    <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-2 md:mb-3">
+                    <h3 className="text-lg md:text-xl font-semibold text-black mb-2 md:mb-3">
                       Harga Tiket
                     </h3>
                     <div className="space-y-1 text-gray-600 text-sm md:text-base">
