@@ -4,7 +4,7 @@ import { Clock, DollarSign } from 'lucide-react';
 const LocationInfo = () => {
   return (
     <section className="py-12 md:py-16 bg-darkGreen rounded-2xl">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-8 md:px-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start">
           {/* Left Side - Information */}
           <div className="text-white" data-aos="fade-right">

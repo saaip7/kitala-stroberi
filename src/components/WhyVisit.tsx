@@ -28,7 +28,7 @@ const WhyVisit = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+      <div className="max-w-7xl mx-auto px-8 md:px-0 relative z-10">
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">

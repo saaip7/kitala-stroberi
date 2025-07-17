@@ -4,7 +4,7 @@ import { Heart, Users, Award, Target } from 'lucide-react';
 
 const AboutUsPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-white">
       {/* Header Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

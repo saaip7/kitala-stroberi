@@ -149,7 +149,7 @@ const Testimonials = () => {
     <section className="py-12 md:py-16">
       <div className="mx-auto">
         {/* Header */}
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-0" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto px-8 md:px-0 flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 gap-6 md:gap-0" data-aos="fade-up">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-3 md:mb-4">
               Apa Kata Mereka

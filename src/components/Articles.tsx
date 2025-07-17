@@ -29,7 +29,7 @@ const Articles = () => {
 
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
+      <div className="max-w-7xl mx-auto px-8 md:px-0">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-8 md:mb-12 gap-4 md:gap-0" data-aos="fade-up">
           <div>
