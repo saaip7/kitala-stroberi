@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 
 const GalleryPage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,38 +12,38 @@ const GalleryPage = () => {
   const slideshowImages = [
     {
       id: 1,
-      src: "https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
-      alt: "Kebun stroberi yang hijau dan segar",
-      title: "Kebun Stroberi Kitala",
-      description: "Hamparan hijau kebun stroberi yang dikelola dengan penuh kasih"
+      src: "/galeri/7.jpg",
+      alt: "Dua orang Tersenyum Bersama Stroberi",
+      title: "Tersenyum Bersama Stroberi",
+      description: "Lihat wajah-wajah bahagia saat pengunjung menikmati pengalaman memetik stroberi langsung dari kebunnya."
     },
     {
       id: 2,
-      src: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
-      alt: "Aktivitas petik stroberi bersama",
-      title: "Aktivitas Petik Stroberi",
-      description: "Momen kebersamaan saat memetik stroberi segar langsung dari kebun"
+      src: "/galeri/1.jpg",
+      alt: "Ruang Luas, Udara Sejuk",
+      title: "Ruang Luas, Udara Sejuk",
+      description: "Berjalan santai di tengah lahan stroberi yang terbuka dan sejuk — tempat terbaik untuk melepas penat bersama keluarga."
     },
     {
       id: 3,
-      src: "https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
-      alt: "Hasil panen stroberi segar",
-      title: "Hasil Panen Berkualitas",
-      description: "Stroberi segar hasil kerja keras para pengelola kebun"
+      src: "/galeripage/semprot.jpg",
+      alt: "Merawat Tanaman Stroberi",
+      title: "Ditanam dengan Perhatian, Dirawat dengan Cinta",
+      description: "Di balik setiap tanaman, ada dedikasi dari para pengelola yang merawat lahan ini dengan sepenuh hati."
     },
     {
       id: 4,
-      src: "https://images.pexels.com/photos/1122408/pexels-photo-1122408.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
+      src: "/galeripage/petik.jpg",
       alt: "Stroberi matang siap dipetik",
-      title: "Stroberi Matang Sempurna",
-      description: "Buah stroberi yang matang sempurna dan siap untuk dipetik"
+      title: "Langsung Petik, Langsung Nikmati",
+      description: "Petik sendiri stroberi segar dari pohonnya. Aktivitas yang seru dan mengasyikkan untuk semua usia."
     },
     {
       id: 5,
-      src: "https://images.pexels.com/photos/162689/strawberries-red-fruit-royalty-free-162689.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop",
-      alt: "Koleksi stroberi merah segar",
-      title: "Stroberi Merah Segar",
-      description: "Koleksi stroberi merah segar yang menggugah selera"
+      src: "/galeripage/parkiran.jpg",
+      alt: "Parkir Luas dan Nyaman",
+      title: "Datang Rame-Rame? Tenang Saja!",
+      description: "Parkiran luas siap menyambut kendaraan pengunjung, dari motor hingga rombongan keluarga."
     }
   ];
 
@@ -53,64 +51,49 @@ const GalleryPage = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      alt: "Fresh strawberries on plant"
+      src: "/galeri/4.jpg",
+      alt: "Buah stroberi muda mulai memerah di tengah dedaunan hijau"
     },
     {
       id: 2,
-      src: "https://images.pexels.com/photos/1122408/pexels-photo-1122408.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      alt: "Strawberry close up"
+      src: "/galeri/3.jpeg",
+      alt: "Stroberi segar siap panen di tangan pengunjung"
     },
     {
       id: 3,
-      src: "https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      alt: "Strawberries in basket"
+      src: "/galeri/2.jpg",
+      alt: "Tanaman stroberi tumbuh subur"
     },
     {
       id: 4,
-      src: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      alt: "Strawberry field view"
+      src: "/galeri/9.jpg",
+      alt: "Memetik stroberi merah ranum langsung dari pohonnya"
     },
     {
       id: 5,
-      src: "https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop",
-      alt: "Picking strawberries"
+      src: "/galeri/5.jpeg",
+      alt: "Keranjang warna-warni berisi hasil panen stroberi"
     },
     {
       id: 6,
-      src: "https://images.pexels.com/photos/162689/strawberries-red-fruit-royalty-free-162689.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      alt: "Strawberry harvest"
+      src: "/galeripage/metik.jpg",
+      alt: "Pengunjung fokus memetik stroberi di antara barisan tanaman"
     },
     {
       id: 7,
-      src: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      alt: "Garden workers"
+      src: "/galeripage/lahan.jpg",
+      alt: "Kebun stroberi organik yang luas di kaki bukit"
     },
     {
       id: 8,
-      src: "https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      alt: "Strawberry plants"
+      src: "/galeripage/lahan2.jpg",
+      alt: "Terasing di tengah alam: barisan tanaman stroberi di lereng"
     },
     {
       id: 9,
-      src: "https://images.pexels.com/photos/1122408/pexels-photo-1122408.jpeg?auto=compress&cs=tinysrgb&w=400&h=600&fit=crop",
-      alt: "Fresh picked strawberries"
+      src: "/galeripage/stro.jpg",
+      alt: "Buah stroberi matang bergantung di antara bunga yang masih mekar"
     },
-    {
-      id: 10,
-      src: "https://images.pexels.com/photos/1263986/pexels-photo-1263986.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      alt: "Strawberry garden path"
-    },
-    {
-      id: 11,
-      src: "https://images.pexels.com/photos/162689/strawberries-red-fruit-royalty-free-162689.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop",
-      alt: "Ripe strawberries"
-    },
-    {
-      id: 12,
-      src: "https://images.pexels.com/photos/1327838/pexels-photo-1327838.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
-      alt: "Garden overview"
-    }
   ];
 
   // Auto-slide functionality
@@ -119,7 +102,7 @@ const GalleryPage = () => {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slideshowImages.length);
-    }, 4000); // Change slide every 4 seconds
+    }, 5000); // Change slide every 5 seconds
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, slideshowImages.length]);
@@ -162,7 +145,7 @@ const GalleryPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white">
             {/* Slideshow Container */}
-            <div className="relative h-96 md:h-[500px] overflow-hidden">
+            <div className="relative h-96 md:h-[600px] overflow-hidden">
               {slideshowImages.map((image, index) => (
                 <div
                   key={image.id}
