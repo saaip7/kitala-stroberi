@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, User } from 'lucide-react';
@@ -15,17 +15,38 @@ const ArticlesPage = () => {
   const [totalPages, setTotalPages] = useState(1);
   const pageSize = 6;
 
+  // Simple cache to avoid refetching the same page
+  const [cache, setCache] = useState<Map<number, Article[]>>(new Map());
+
   useEffect(() => {
     fetchArticles(currentPage);
   }, [currentPage]);
 
   const fetchArticles = async (page: number) => {
     try {
+      // Check cache first
+      if (cache.has(page)) {
+        setArticles(cache.get(page) || []);
+        setLoading(false);
+        return;
+      }
+
       setLoading(true);
       setError(null);
       
+      // Add performance timing
+      const startTime = performance.now();
+      
       const response: StrapiResponse<Article[]> = await strapiApi.getArticles(page, pageSize);
-      setArticles(response.data || []);
+      
+      const endTime = performance.now();
+      console.log(`Article fetch took ${endTime - startTime} milliseconds`);
+      
+      const fetchedArticles = response.data || [];
+      setArticles(fetchedArticles);
+      
+      // Cache the results
+      setCache(prev => new Map(prev.set(page, fetchedArticles)));
       
       if (response.meta?.pagination) {
         setTotalPages(response.meta.pagination.pageCount);
@@ -38,19 +59,19 @@ const ArticlesPage = () => {
     }
   };
 
-  const getImageUrl = (article: Article): string => {
+  const getImageUrl = useCallback((article: Article): string => {
     const imageData = article.foto;
     if (imageData) {
       return strapiApi.getImageUrl(imageData.url);
     }
     return 'https://images.pexels.com/photos/89775/strawberries-frisch-ripe-sweet-89775.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop';
-  };
+  }, []);
 
-  const getImageAlt = (article: Article): string => {
+  const getImageAlt = useCallback((article: Article): string => {
     return article.foto?.alternativeText || article.judul;
-  };
+  }, []);
 
-  const stripMarkdown = (markdown: string): string => {
+  const stripMarkdown = useCallback((markdown: string): string => {
     return markdown
       // Remove headers
       .replace(/^#+\s+/gm, '')
@@ -78,13 +99,24 @@ const ArticlesPage = () => {
       .replace(/\n/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
-  };
+  }, []);
 
-  const truncateContent = (content: string, maxLength: number = 150): string => {
+  const truncateContent = useCallback((content: string, maxLength: number = 150): string => {
     const cleanText = stripMarkdown(content);
     if (cleanText.length <= maxLength) return cleanText;
     return cleanText.substring(0, maxLength) + '...';
-  };
+  }, [stripMarkdown]);
+
+  // Memoize processed articles to avoid re-processing on every render
+  const processedArticles = useMemo(() => {
+    return articles.map(article => ({
+      ...article,
+      imageUrl: getImageUrl(article),
+      imageAlt: getImageAlt(article),
+      excerpt: truncateContent(article.konten),
+      formattedDate: strapiApi.formatDate(article.publishedAt)
+    }));
+  }, [articles, getImageUrl, getImageAlt, truncateContent]);
 
   if (loading) {
     return (
@@ -145,7 +177,7 @@ const ArticlesPage = () => {
           ) : (
             <>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {articles.map((article) => (
+                {processedArticles.map((article) => (
                   <article 
                     key={article.id} 
                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -153,10 +185,12 @@ const ArticlesPage = () => {
                     {/* Article Image */}
                     <div className="relative h-48 overflow-hidden">
                       <Image
-                        src={getImageUrl(article)}
-                        alt={getImageAlt(article)}
+                        src={article.imageUrl}
+                        alt={article.imageAlt}
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-300"
+                        priority={false}
+                        loading="lazy"
                       />
                     </div>
 
@@ -166,7 +200,7 @@ const ArticlesPage = () => {
                       <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
-                          <span>{strapiApi.formatDate(article.publishedAt)}</span>
+                          <span>{article.formattedDate}</span>
                         </div>
                         
                         {article.penulis && (
@@ -184,7 +218,7 @@ const ArticlesPage = () => {
 
                       {/* Article Excerpt */}
                       <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-2 h-12">
-                        {truncateContent(article.konten)}
+                        {article.excerpt}
                       </p>
 
                       {/* Read More Link */}

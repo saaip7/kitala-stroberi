@@ -18,8 +18,11 @@ export async function GET(request: NextRequest) {
     }
 
     const response = await fetch(
-      `${STRAPI_URL}/api/artikels?populate=*&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=publishedAt:desc`,
-      { headers }
+      `${STRAPI_URL}/api/artikels?populate[foto][fields][0]=url&populate[foto][fields][1]=alternativeText&fields[0]=judul&fields[1]=slug&fields[2]=publishedAt&fields[3]=penulis&fields[4]=konten&pagination[page]=${page}&pagination[pageSize]=${pageSize}&sort=publishedAt:desc`,
+      { 
+        headers,
+        next: { revalidate: 300 } // Cache for 5 minutes
+      }
     );
 
     if (!response.ok) {
