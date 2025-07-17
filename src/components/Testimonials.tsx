@@ -59,49 +59,49 @@ const Testimonials = () => {
 
   // Dummy testimonial data
   const testimonials = [
-    {
-      id: 1,
-      name: "Jay Jo",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur. Massa enim est diam nunc fusce quis turpis. In sem faucibus amet lacus. Ut aliquam tristique tellus ut. Orci dictum massa malesuada morbi pharetra semper cursus elementum. Purus volutpat amet amet ut. Eu.",
-      avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
-    },
-    {
-      id: 2,
-      name: "Sarah Kim",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur. Massa enim est diam nunc fusce quis turpis. In sem faucibus amet lacus. Ut aliquam tristique tellus ut. Orci dictum massa malesuada morbi pharetra semper cursus elementum. Purus volutpat amet amet ut. Eu.",
-      avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
-    },
-    {
-      id: 3,
-      name: "Mike Chen",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur. Massa enim est diam nunc fusce quis turpis. In sem faucibus amet lacus. Ut aliquam tristique tellus ut. Orci dictum massa malesuada morbi pharetra semper cursus elementum. Purus volutpat amet amet ut. Eu.",
-      avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
-    },
-    {
-      id: 4,
-      name: "Lisa Wang",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur. Massa enim est diam nunc fusce quis turpis. In sem faucibus amet lacus. Ut aliquam tristique tellus ut. Orci dictum massa malesuada morbi pharetra semper cursus elementum. Purus volutpat amet amet ut. Eu.",
-      avatar: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
-    },
-    {
-      id: 5,
-      name: "David Park",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur. Massa enim est diam nunc fusce quis turpis. In sem faucibus amet lacus. Ut aliquam tristique tellus ut. Orci dictum massa malesuada morbi pharetra semper cursus elementum. Purus volutpat amet amet ut. Eu.",
-      avatar: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
-    },
-    {
-      id: 6,
-      name: "Emma Johnson",
-      rating: 5,
-      text: "Lorem ipsum dolor sit amet consectetur. Massa enim est diam nunc fusce quis turpis. In sem faucibus amet lacus. Ut aliquam tristique tellus ut. Orci dictum massa malesuada morbi pharetra semper cursus elementum. Purus volutpat amet amet ut. Eu.",
-      avatar: "https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
-    }
-  ];
+  {
+    id: 1,
+    name: "Iskandar NS",
+    rating: 5,
+    text: "Wisata petik strawberry di kebun Kitala sangat berkesan, alamnya Asri, pemandangan keren, hawa nya sejuk beda dengan tempat yang lain, yang membuat saya kagum Kebun Kitala Strawberry di kelola sama saudara kita yang mengalami disabilitas mental sebagai bentuk pembelajaran kemandirian buat mereka.",
+    avatar: "https://lh3.googleusercontent.com/a-/ALV-UjVIHiVZXGT8pYIHy9fcMYXzvNtETuwEkXZ_r6uh5ZwfGgjPQ5NN=w90-h90-p-rp-mo-br100"
+  },
+  {
+    id: 2,
+    name: "Nyoman Adi Susila",
+    rating: 5,
+    text: "Saya sudah pernah dua kali ke kebun kitala petik strawberry. Sekarang saya dari Bali bersama rombongan. Harga masih ramah di kantong strawberrynya manis. Terima kasih kepada pengelola yang sangat ramah.",
+    avatar: "https://lh3.googleusercontent.com/a-/ALV-UjWl4XAQFWL3Z8fg6xtpm14Lg3jAgqvrezLpiAULfoky_q0Xy1k=w90-h90-p-rp-mo-ba5-br100"
+  },
+  {
+    id: 3,
+    name: "Prasetyo Hari P",
+    rating: 5,
+    text: "Suasana sejuk dan dingin, buah nya juga besar lokasinya sangat strategis 👍",
+    avatar: "/avatar-testimoni/prasetyo.png"
+  },
+  {
+    id: 4,
+    name: "Sinta Yunita Sari",
+    rating: 5,
+    text: "Kualitas strawberry nya tidak usah diragukan lagi, rasanya manis, dan ukurannya besar. Tempatnya nyaman, sejuk dan luas. Very recommended. Dijamin tidak menyesal.",
+    avatar: "/avatar-testimoni/sinta.png"
+  },
+  {
+    id: 5,
+    name: "Zenni Afifah",
+    rating: 5,
+    text: "Mantap luar biasaa kebu Strowbery Kitalah tdk mengecewakan , luar biasa buahnyaa manis2 merah2 besar2. Mantappp dan puasss🥰🙏❤️❤️❤️❤️",
+    avatar: "/avatar-testimoni/zeeni.png"
+  },
+  {
+    id: 6,
+    name: "Parley Davit'son",
+    rating: 5,
+    text: "Kebun Kitala merupakan tempat refreshing.. sekaligus menikmati langsung buah strawberry 🍓 dari pohon nya.. Juga merupakan tempat berproses.. Atau terapi bekerja bagi para disabilitas mental 🙏👍🙏",
+    avatar: "https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
+  }
+];
 
   const scrollToIndex = (index: number) => {
     if (scrollContainerRef.current) {
@@ -195,7 +195,7 @@ const Testimonials = () => {
                 className="flex-shrink-0 w-72 md:w-80 bg-[#F5F5F5] rounded-xl md:rounded-2xl p-4 md:p-6"
               >
                 {/* Testimonial Text */}
-                <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 text-sm">
+                <p className="text-gray-600 leading-relaxed mb-4 md:mb-6 text-sm min-h-[180px]">
                   {testimonial.text}
                 </p>
 
