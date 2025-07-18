@@ -129,10 +129,10 @@ const GalleryPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
+            <h1 className="text-3xl md:text-5xl font-semibold text-black mb-4">
               Galeri Kebun Kitala
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-md md:text-lg text-gray-600 max-w-2xl mx-auto">
               Jelajahi keindahan kebun stroberi kami melalui koleksi foto-foto 
               yang menampilkan aktivitas sehari-hari dan momen-momen berharga
             </p>
@@ -166,9 +166,9 @@ const GalleryPage = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
                   {/* Content */}
-                  <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 text-white">
-                    <h3 className="text-2xl md:text-3xl font-semibold mb-2">{image.title}</h3>
-                    <p className="text-lg text-gray-200 max-w-2xl">{image.description}</p>
+                  <div className="absolute bottom-0 left-0 right-0 mb-4 p-6 md:p-8 text-white">
+                    <h3 className="text-md md:text-3xl font-semibold mb-2">{image.title}</h3>
+                    <p className="text-sm md:text-lg text-gray-200 max-w-2xl">{image.description}</p>
                   </div>
                 </div>
               ))}
@@ -177,14 +177,14 @@ const GalleryPage = () => {
             {/* Navigation Arrows */}
             <button
               onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-200 group"
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-200 group"
             >
               <ChevronLeft className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
             </button>
             
             <button
               onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-200 group"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full flex items-center justify-center transition-all duration-200 group"
             >
               <ChevronRight className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
             </button>

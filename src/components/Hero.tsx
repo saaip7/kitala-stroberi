@@ -69,7 +69,7 @@ const Hero = () => {
                       href="https://wa.me/6281234567890"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 md:px-8 flex items-center rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30"
+                      className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white px-6 md:px-8 py-3 flex justify-center items-center rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30"
                     >
                       HUBUNGI
                     </a>

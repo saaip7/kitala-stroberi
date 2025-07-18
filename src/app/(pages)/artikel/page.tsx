@@ -156,10 +156,10 @@ const ArticlesPage = () => {
       <section className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold text-black mb-4">
+            <h1 className="text-3xl md:text-5xl font-semibold text-black mb-4">
               Cerita dari Kebun Kitala
             </h1>
-            <p className="text-xl text-gray max-w-3xl mx-auto">
+            <p className="text-md md:text-lg text-gray max-w-3xl mx-auto">
               Ikuti perjalanan kami dalam membangun komunitas yang kuat melalui 
               kebun stroberi yang lebih dari sekadar tempat bercocok tanam.
             </p>
