@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
             <div className="flex flex-row items-center gap-2">
               <a
-                href="https://www.tiktok.com/@yourusername"
+                href="https://www.tiktok.com/@kitala.strawberry"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-white p-2 inline-block hover:bg-[#E12929] transition-colors duration-200 group"
@@ -60,7 +60,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://www.instagram.com/@yourusername"
+                href="https://www.instagram.com/kitala_strawberry/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-white p-2 inline-block hover:bg-[#E12929] transition-colors duration-200 group"
