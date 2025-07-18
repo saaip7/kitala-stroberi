@@ -71,28 +71,28 @@ const Footer = () => {
 
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 text-white text-sm md:text-base">
               <a
-                href="#"
+                href="/"
                 className="hover:text-white transition-colors duration-200"
               >
-                Tentang Kami
+                Beranda
               </a>
               <a
-                href="#"
+                href="/galeri"
                 className="hover:text-white transition-colors duration-200"
               >
                 Galeri
               </a>
               <a
-                href="#"
+                href="#/tentang-kami"
                 className="hover:text-white transition-colors duration-200"
               >
-                Wisata
+                Tentang Kami
               </a>
               <a
-                href="#"
+                href="/artikel"
                 className="hover:text-white transition-colors duration-200"
               >
-                Cerita
+                Artikel
               </a>
             </div>
           </div>
