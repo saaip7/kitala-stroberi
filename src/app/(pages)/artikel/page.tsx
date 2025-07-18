@@ -18,14 +18,20 @@ const ArticlesPage = () => {
   // Simple cache to avoid refetching the same page
   const [cache, setCache] = useState<Map<number, Article[]>>(new Map());
 
+  const refreshArticles = useCallback(() => {
+    // Clear all cache and force refresh
+    setCache(new Map());
+    fetchArticles(currentPage, true);
+  }, [currentPage]);
+
   useEffect(() => {
     fetchArticles(currentPage);
   }, [currentPage]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const fetchArticles = async (page: number) => {
+  const fetchArticles = async (page: number, forceRefresh: boolean = false) => {
     try {
-      // Check cache first
-      if (cache.has(page)) {
+      // Check cache first (unless forced refresh)
+      if (!forceRefresh && cache.has(page)) {
         setArticles(cache.get(page) || []);
         setLoading(false);
         return;
@@ -45,8 +51,12 @@ const ArticlesPage = () => {
       const fetchedArticles = response.data || [];
       setArticles(fetchedArticles);
       
-      // Cache the results
-      setCache(prev => new Map(prev.set(page, fetchedArticles)));
+      // Cache the results (clear old cache for this page first)
+      setCache(prev => {
+        const newCache = new Map(prev);
+        newCache.set(page, fetchedArticles);
+        return newCache;
+      });
       
       if (response.meta?.pagination) {
         setTotalPages(response.meta.pagination.pageCount);
@@ -138,7 +148,7 @@ const ArticlesPage = () => {
           <div className="text-center">
             <p className="text-red-600 mb-4">{error}</p>
             <button 
-              onClick={() => fetchArticles(currentPage)}
+              onClick={() => fetchArticles(currentPage, true)}
               className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg transition-colors duration-200"
             >
               Coba Lagi

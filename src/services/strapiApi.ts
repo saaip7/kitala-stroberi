@@ -13,7 +13,7 @@ class StrapiApiService {
   private async fetchFromApi<T>(endpoint: string): Promise<T> {
     try {
       const response = await fetch(`${this.baseUrl}${endpoint}`, {
-        next: { revalidate: 60 } // Revalidate every 60 seconds
+        cache: 'no-store' // Disable caching to get fresh data
       });
       
       if (!response.ok) {

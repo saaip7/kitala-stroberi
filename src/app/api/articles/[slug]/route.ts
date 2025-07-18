@@ -22,7 +22,10 @@ export async function GET(
     // Try to fetch by slug first
     let response = await fetch(
       `${STRAPI_URL}/api/artikels?populate=*&filters[slug][$eq]=${slug}`,
-      { headers }
+      { 
+        headers,
+        cache: 'no-store' // Disable caching for individual articles
+      }
     );
 
     if (!response.ok) {
@@ -37,7 +40,10 @@ export async function GET(
       if (!isNaN(id)) {
         response = await fetch(
           `${STRAPI_URL}/api/artikels/${id}?populate=*`,
-          { headers }
+          { 
+            headers,
+            cache: 'no-store' // Disable caching for ID fallback
+          }
         );
         
         if (response.ok) {

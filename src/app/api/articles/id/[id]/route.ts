@@ -20,7 +20,10 @@ export async function GET(
 
     const response = await fetch(
       `${STRAPI_URL}/api/artikels/${id}?populate=*`,
-      { headers }
+      { 
+        headers,
+        cache: 'no-store' // Disable caching for ID-based fetches
+      }
     );
 
     if (!response.ok) {
