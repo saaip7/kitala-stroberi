@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -70,30 +71,30 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8 text-white text-sm md:text-base">
-              <a
+              <Link
                 href="/"
                 className="hover:text-white transition-colors duration-200"
               >
                 Beranda
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/galeri"
                 className="hover:text-white transition-colors duration-200"
               >
                 Galeri
-              </a>
+              </Link>
               <a
                 href="#/tentang-kami"
                 className="hover:text-white transition-colors duration-200"
               >
                 Tentang Kami
               </a>
-              <a
+              <Link
                 href="/artikel"
                 className="hover:text-white transition-colors duration-200"
               >
                 Artikel
-              </a>
+              </Link>
             </div>
           </div>
         </div>

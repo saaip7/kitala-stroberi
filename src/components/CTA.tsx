@@ -19,7 +19,7 @@ const CTA = () => {
         await navigator.clipboard.writeText(window.location.origin);
         alert('Link website telah disalin ke clipboard!');
       }
-    } catch (error) {
+    } catch {
       // If both fail, show the URL
       prompt('Salin link website ini untuk dibagikan:', window.location.origin);
     }

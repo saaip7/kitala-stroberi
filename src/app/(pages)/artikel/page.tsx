@@ -18,12 +18,6 @@ const ArticlesPage = () => {
   // Simple cache to avoid refetching the same page
   const [cache, setCache] = useState<Map<number, Article[]>>(new Map());
 
-  const refreshArticles = useCallback(() => {
-    // Clear all cache and force refresh
-    setCache(new Map());
-    fetchArticles(currentPage, true);
-  }, [currentPage]);
-
   useEffect(() => {
     fetchArticles(currentPage);
   }, [currentPage]); // eslint-disable-line react-hooks/exhaustive-deps
