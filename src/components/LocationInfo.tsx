@@ -66,7 +66,7 @@ const LocationInfo = () => {
           </div>
 
           {/* Right Side - Map */}
-          <div className="lg:pl-8 mt-6 lg:mt-0" data-aos="fade-left" data-aos-delay="200">
+          <div className="lg:pl-8 mt-6 lg:mt-0" data-aos="fade-up" data-aos-delay="200">
             <div className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-2xl h-64 md:h-80 lg:h-[500px]">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.9594621886595!2d112.53212101542759!3d-7.794116969103092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e787f440e5649e3%3A0xa44b8c9567c9144c!2sKebun%20Kitala%20Wisata%20Petik%20Strawberry!5e0!3m2!1sid!2sid!4v1752703736471!5m2!1sid!2sid" 
