@@ -110,7 +110,7 @@ const Hero = () => {
                           <div>
                             <p className="text-gray-600 text-sm">Tiket</p>
                             <p className="font-semibold text-black">
-                              15 Ribu /pax
+                              Mulai 15 Ribu
                             </p>
                           </div>
                         </div>
