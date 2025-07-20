@@ -28,13 +28,13 @@ const WhyVisit = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 md:px-0 relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10" style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>
         {/* Header */}
         <div className="text-center mb-12" data-aos="fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4">
             Kenapa Harus ke Kitala?
           </h2>
-          <p className="text-base md:text-lg text-white max-w-2xl mx-auto px-4">
+          <p className="text-base md:text-lg text-white max-w-2xl mx-auto" style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
             Tempat wisata ramah, teduh, dan menyenangkan — untuk semua kalangan
           </p>
         </div>

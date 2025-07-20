@@ -32,7 +32,7 @@ const CTA = () => {
   };
   return (
     <section className="py-16 bg-white">
-      <div className="px-4 sm:px-6 lg:px-8">
+      <div style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
         {/* Rounded Container with Background Image */}
         <div className="relative rounded-3xl overflow-hidden min-h-[500px] shadow-2xl" data-aos="fade-up">
           {/* Background Image */}

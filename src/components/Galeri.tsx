@@ -77,7 +77,7 @@ const Gallery = () => {
 
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-8 md:px-0">
+      <div className="max-w-7xl mx-auto" style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>
         {/* Header */}
         <div className="flex flex-col md:flex-row md:justify-between md:items-end mb-8 md:mb-12 gap-6" data-aos="fade-up">
           <div>

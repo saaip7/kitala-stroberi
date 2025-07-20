@@ -158,7 +158,7 @@ const ArticlesPage = () => {
       
       {/* Hero Section */}
       <section className="bg-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto" style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
           <div className="text-center">
             <h1 className="text-3xl md:text-5xl font-semibold text-black mb-4">
               Cerita dari Kebun Kitala

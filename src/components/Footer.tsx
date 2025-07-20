@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="bg-white">
       <div className="bg-darkGreen text-white py-8 md:py-12 rounded-t-3xl">
-        <div className="mx-auto px-6 sm:px-8 lg:px-20">
+        <div className="mx-auto" style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
             {/* Left Side - Logo and Address */}
             <div className="space-y-3 md:space-y-2 text-center lg:text-left">

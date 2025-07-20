@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 const AboutUs = () => {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-8 md:px-0">
+      <div className="max-w-7xl mx-auto" style={{ paddingLeft: '2vw', paddingRight: '2vw' }}>
         {/* Header */}
         <div className="mb-12" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-semibold text-black">
