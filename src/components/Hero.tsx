@@ -5,7 +5,7 @@ import { AiFillInstagram, AiOutlineTikTok } from "react-icons/ai";
 const Hero = () => {
   return (
     <div className="min-h-screen py-2">
-      <div className="mx-auto" style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
+      <div className="mx-auto" style={{ paddingLeft: '1.5vw', paddingRight: '1.5vw' }}>
         {/* Rounded Container with Background Image */}
         <div className="relative rounded-3xl overflow-hidden min-h-[95vh] bg-white" data-aos="fade-up">
           {/* Background Image */}
