@@ -60,7 +60,7 @@ const Navbar = () => {
 
           {/* Desktop CTA Button */}
           <a
-            href="https://wa.me/"
+            href="https://wa.me/628983837962"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex bg-white hover:bg-gray-50 border border-gray-300 border-2 text-black hover:text-red-500 px-4 py-2 rounded-full transition-all duration-200 font-medium items-center justify-center"
@@ -118,7 +118,7 @@ const Navbar = () => {
               {/* Mobile CTA Button */}
               <div className="px-2 pt-2">
                 <a
-                  href="https://wa.me/"
+                  href="https://wa.me/628983837962"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full transition-all duration-200 font-medium items-center justify-center w-full"

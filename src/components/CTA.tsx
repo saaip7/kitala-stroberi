@@ -27,7 +27,7 @@ const CTA = () => {
 
   const handleWhatsApp = () => {
     const message = encodeURIComponent('Halo! Saya tertarik untuk berkunjung ke Kebun Stroberi Kitala. Bisa minta informasi lebih lanjut?');
-    const phoneNumber = '6281234567890'; // Replace with actual WhatsApp number
+    const phoneNumber = '628983837962'; // Replace with actual WhatsApp number
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
   return (
