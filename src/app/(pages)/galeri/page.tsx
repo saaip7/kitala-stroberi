@@ -61,7 +61,7 @@ const GalleryPage = () => {
     },
     {
       id: 3,
-      src: "/galeri/2.jpg",
+      src: "/galeripage/new/IMG_9305.jpg",
       alt: "Tanaman stroberi tumbuh subur"
     },
     {
@@ -71,7 +71,7 @@ const GalleryPage = () => {
     },
     {
       id: 5,
-      src: "/galeri/5.jpeg",
+      src: "/galeripage/new/IMG_9285.jpg",
       alt: "Keranjang warna-warni berisi hasil panen stroberi"
     },
     {
@@ -81,7 +81,7 @@ const GalleryPage = () => {
     },
     {
       id: 7,
-      src: "/galeripage/lahan.jpg",
+      src: "/galeripage/new/IMG_9325.jpg",
       alt: "Kebun stroberi organik yang luas di kaki bukit"
     },
     {
