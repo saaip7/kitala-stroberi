@@ -63,7 +63,7 @@ const AboutUsPage = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <div className="aspect-[4/3] relative">
                   <Image
-                    src="https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                    src="/aboutus/profil alhafish.jpeg"
                     alt="Yayasan Rehabilitasi Mental Al-Hafish"
                     fill
                     className="object-cover"
