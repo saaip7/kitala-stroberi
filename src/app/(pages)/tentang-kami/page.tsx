@@ -44,7 +44,7 @@ const AboutUsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Kitala Stroberi Contact */}
               <a
-                href="https://wa.me/628983837962"
+                href="https://wa.me/628983837962?text=Halo%2C%20saya%20tertarik%20untuk%20berkunjung%20ke%20Kebun%20Stroberi%20Kitala.%20Bisa%20minta%20informasi%20lebih%20lanjut%3F"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-200 group border-l-4 border-green-500"
@@ -55,14 +55,14 @@ const AboutUsPage = () => {
                   </div>
                   <div className="flex-1">
                     <div className="font-semibold text-gray-800 text-sm">Pengurus Kitala Stroberi</div>
-                    <div className="text-xs text-gray-600">Chat WhatsApp</div>
+                    <div className="text-xs text-gray-600">Informasi wisata & tiket</div>
                   </div>
                 </div>
               </a>
 
               {/* Owner Contact */}
               <a
-                href="https://wa.me/6281234567890"
+                href="https://wa.me/6281233530434?text=Halo%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20program%20Yayasan%20Al%20Hafish.%20Terima%20kasih."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-200 group border-l-4 border-blue-500"
@@ -72,15 +72,15 @@ const AboutUsPage = () => {
                     <User className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-gray-800 text-sm">Owner Yayasan Al Hafish</div>
-                    <div className="text-xs text-gray-600">Chat WhatsApp</div>
+                    <div className="font-semibold text-gray-800 text-sm">Owner Yayasan Rehabilitasi Mental Al Hafish</div>
+                    <div className="text-xs text-gray-600">Program yayasan & kerjasama</div>
                   </div>
                 </div>
               </a>
 
               {/* Admin Contact */}
               <a
-                href="https://wa.me/6289876543210"
+                href="https://wa.me/6281938884890?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20kegiatan%20di%20Yayasan%20Al%20Hafish.%20Mohon%20informasinya."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-200 group border-l-4 border-blue-500"
@@ -90,8 +90,8 @@ const AboutUsPage = () => {
                     <Users className="w-6 h-6" />
                   </div>
                   <div className="flex-1">
-                    <div className="font-semibold text-gray-800 text-sm">Admin Yayasan Al Hafish</div>
-                    <div className="text-xs text-gray-600">Chat WhatsApp</div>
+                    <div className="font-semibold text-gray-800 text-sm">Admin Yayasan Rehabilitasi Mental Al Hafish</div>
+                    <div className="text-xs text-gray-600">Informasi umum & pendaftaran</div>
                   </div>
                 </div>
               </a>

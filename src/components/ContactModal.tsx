@@ -13,27 +13,34 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
       id: 1,
       name: "Pengurus Kitala Stroberi",
       phone: "628983837962",
+      message: "Halo, saya tertarik untuk berkunjung ke Kebun Stroberi Kitala. Bisa minta informasi lebih lanjut?",
+      description: "Informasi wisata & tiket",
       icon: <MessageCircle className="w-5 h-5" />,
       category: "kitala"
     },
     {
       id: 2,
       name: "Owner Yayasan Rehabilitasi Mental Al Hafish",
-      phone: "6281233530434", // Ganti dengan nomor yang sesuai
+      phone: "6281233530434",
+      message: "Halo, saya ingin mengetahui lebih lanjut tentang program Yayasan Al Hafish. Terima kasih.",
+      description: "Program yayasan & kerjasama",
       icon: <User className="w-5 h-5" />,
       category: "yayasan"
     },
     {
       id: 3,
       name: "Admin Yayasan Rehabilitasi Mental Al Hafish",
-      phone: "6281938884890", // Ganti dengan nomor yang sesuai
+      phone: "6281938884890",
+      message: "Halo, saya ingin bertanya tentang kegiatan di Yayasan Al Hafish. Mohon informasinya.",
+      description: "Informasi umum & pendaftaran",
       icon: <Users className="w-5 h-5" />,
       category: "yayasan"
     }
   ];
 
-  const handleContactClick = (phone: string) => {
-    window.open(`https://wa.me/${phone}`, '_blank');
+  const handleContactClick = (phone: string, message: string) => {
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, '_blank');
     onClose();
   };
 
@@ -72,7 +79,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               Kitala Stroberi
             </h3> */}
             <button
-              onClick={() => handleContactClick(contactOptions[0].phone)}
+              onClick={() => handleContactClick(contactOptions[0].phone, contactOptions[0].message)}
               className="w-full flex items-center p-4 bg-green-50 hover:bg-green-100 border border-green-200 rounded-xl transition-all duration-200 group"
             >
               <div className="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full mr-4 group-hover:bg-green-600">
@@ -80,7 +87,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               </div>
               <div className="flex-1 text-left">
                 <div className="font-medium text-gray-800">{contactOptions[0].name}</div>
-                <div className="text-sm text-gray-600">Klik untuk chat WhatsApp</div>
+                <div className="text-sm text-gray-600">{contactOptions[0].description}</div>
               </div>
             </button>
           </div>
@@ -97,7 +104,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             {contactOptions.slice(1).map((contact) => (
               <button
                 key={contact.id}
-                onClick={() => handleContactClick(contact.phone)}
+                onClick={() => handleContactClick(contact.phone, contact.message)}
                 className="w-full flex items-center p-4 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-all duration-200 group"
               >
                 <div className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full mr-4 group-hover:bg-blue-600">
@@ -105,7 +112,7 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
                 </div>
                 <div className="flex-1 text-left">
                   <div className="font-medium text-gray-800">{contact.name}</div>
-                  <div className="text-sm text-gray-600">Klik untuk chat WhatsApp</div>
+                  <div className="text-sm text-gray-600">{contact.description}</div>
                 </div>
               </button>
             ))}
