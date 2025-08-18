@@ -67,9 +67,7 @@ const Hero = () => {
                     </a>
 
                     <a 
-                      href="https://wa.me/628983837962"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/tentang-kami"
                       className="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white flex justify-center items-center rounded-full transition-all duration-200 font-medium text-sm md:text-base border border-white/30"
                       style={{ paddingLeft: '2vw', paddingRight: '2vw', paddingTop: '0.75rem', paddingBottom: '0.75rem' }}
                     >

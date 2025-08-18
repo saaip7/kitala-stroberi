@@ -25,11 +25,12 @@ const CTA = () => {
     }
   };
 
-  const handleWhatsApp = () => {
-    const message = encodeURIComponent('Halo! Saya tertarik untuk berkunjung ke Kebun Stroberi Kitala. Bisa minta informasi lebih lanjut?');
-    const phoneNumber = '628983837962'; // Replace with actual WhatsApp number
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-  };
+  // const handleWhatsApp = () => {
+  //   const message = encodeURIComponent('Halo! Saya tertarik untuk berkunjung ke Kebun Stroberi Kitala. Bisa minta informasi lebih lanjut?');
+  //   const phoneNumber = '628983837962'; // Replace with actual WhatsApp number
+  //   window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+  // };
+  
   return (
     <section className="py-16 bg-white">
       <div style={{ paddingLeft: '1vw', paddingRight: '1vw' }}>
@@ -68,8 +69,8 @@ const CTA = () => {
                   BAGIKAN CERITA
                 </button>
                 
-                <button 
-                  onClick={handleWhatsApp}
+                <button
+                  onClick={() => window.open('/tentang-kami', '_self')}
                   className="cursor-pointer bg-transparent hover:bg-white/10 text-white px-8 h-[50px] text-[14px] rounded-full transition-all duration-200 font-medium border-2 border-white hover:border-white/80"
                 >
                   HUBUNGI SEKARANG

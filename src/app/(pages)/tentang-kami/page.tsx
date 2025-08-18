@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Heart, Users, Award, Target } from 'lucide-react';
+import { Heart, Users, Award, Target, MessageCircle, User } from 'lucide-react';
 
 const AboutUsPage = () => {
   return (
@@ -8,7 +8,7 @@ const AboutUsPage = () => {
       {/* Header Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-2">
             <h1 className="text-3xl md:text-5xl font-semibold text-black mb-4">
               Tentang Kami
             </h1>
@@ -16,6 +16,86 @@ const AboutUsPage = () => {
               Mengenal lebih dekat perjalanan kami dalam memberdayakan 
               masyarakat melalui kebun stroberi yang penuh makna
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-12 mb-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-black mb-3">
+              Hubungi Kami
+            </h2>
+            <p className="text-gray-600 max-w-xl mx-auto">
+              Siap untuk berkunjung? Hubungi kami melalui WhatsApp
+            </p>
+          </div> */}
+
+          {/* Additional Info */}
+            <div className="text-center mb-4">
+              <p className="text-xs text-gray-500">
+                Ada pertanyaan? Hubungi kami melalui WhatsApp
+              </p>
+            </div>
+
+          <div className="space-y-6">
+            {/* All Contacts in Flex Row */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Kitala Stroberi Contact */}
+              <a
+                href="https://wa.me/628983837962"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-200 group border-l-4 border-green-500"
+              >
+                <div className="flex items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full mr-4 group-hover:bg-green-600">
+                    <MessageCircle className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-800 text-sm">Pengurus Kitala Stroberi</div>
+                    <div className="text-xs text-gray-600">Chat WhatsApp</div>
+                  </div>
+                </div>
+              </a>
+
+              {/* Owner Contact */}
+              <a
+                href="https://wa.me/6281234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-200 group border-l-4 border-blue-500"
+              >
+                <div className="flex items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full mr-4 group-hover:bg-blue-600">
+                    <User className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-800 text-sm">Owner Yayasan Al Hafish</div>
+                    <div className="text-xs text-gray-600">Chat WhatsApp</div>
+                  </div>
+                </div>
+              </a>
+
+              {/* Admin Contact */}
+              <a
+                href="https://wa.me/6289876543210"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-200 group border-l-4 border-blue-500"
+              >
+                <div className="flex items-center">
+                  <div className="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full mr-4 group-hover:bg-blue-600">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="font-semibold text-gray-800 text-sm">Admin Yayasan Al Hafish</div>
+                    <div className="text-xs text-gray-600">Chat WhatsApp</div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
