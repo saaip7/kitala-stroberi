@@ -43,7 +43,7 @@ const AboutUs = () => {
             {/* Top Image */}
             <div className="rounded-2xl overflow-hidden h-56">
               <img
-                src="/aboutus/kitala-3.jpg"
+                src="/aboutus/ttg kita.jpeg"
                 alt="Strawberries growing on plant"
                 className="w-full h-full object-cover"
               />
