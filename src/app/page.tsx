@@ -1,4 +1,3 @@
-import Hero from "../components/Hero";
 import Gallery from "@/components/Galeri";
 import WhyVisit from "@/components/WhyVisit";
 import AboutUs from "@/components/AboutUs";
