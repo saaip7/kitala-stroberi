@@ -22,9 +22,9 @@ const Navbar = () => {
           <Link href="/" className="flex items-center">
             <div className="flex items-center space-x-2 w-[110px] h-[50px]">
               <Image 
-                src="/Logo.png" 
+                src="/logo-neww.png" 
                 alt="Kitala Stroberi Logo" 
-                width={110} 
+                width={200} 
                 height={50} 
                 priority
                 className="hover:scale-105 transition-transform duration-200 object-contain w-full h-full"

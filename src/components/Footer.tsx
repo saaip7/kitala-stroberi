@@ -14,11 +14,11 @@ const Footer = () => {
               {/* Logo */}
               <div className="flex items-center justify-center lg:justify-start">
                 <Image
-                  src="/LOGO 2 WHITE.png"
+                  src="/logo-neww.png"
                   alt="Kitala Stroberi Logo"
-                  width={280}
+                  width={200}
                   height={0}
-                  className="md:w-[320px]"
+                  className="md:w-[240px]"
                 />
               </div>
 
